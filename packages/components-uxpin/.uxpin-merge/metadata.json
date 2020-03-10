@@ -1,0 +1,126 @@
+{
+  "categorizedComponents": [
+    {
+      "components": [
+        {
+          "documentation": {
+            "examples": [
+              {
+                "code": "<TestField></TestField>"
+              }
+            ]
+          },
+          "info": {
+            "dirPath": "src/components/TestField",
+            "documentation": {
+              "path": "src/components/TestField/TestField.md"
+            },
+            "implementation": {
+              "framework": "reactjs",
+              "lang": "javascript",
+              "path": "src/components/TestField/TestField.js"
+            },
+            "presets": [
+              {
+                "path": "src/components/TestField/presets/0-default.jsx"
+              }
+            ]
+          },
+          "name": "TestField",
+          "presets": [
+            {
+              "elements": {
+                "TestField": {
+                  "name": "TestField",
+                  "props": {
+                    "children": [
+                      {
+                        "uxpinPresetElementId": "TestFiled.TestInput"
+                      }
+                    ]
+                  }
+                },
+                "TestFiled.TestInput": {
+                  "name": "TestInput",
+                  "props": {}
+                }
+              },
+              "name": "default",
+              "rootId": "TestField"
+            }
+          ],
+          "properties": [
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "children",
+              "type": {
+                "name": "node",
+                "structure": {}
+              }
+            }
+          ],
+          "wrappers": []
+        },
+        {
+          "documentation": {
+            "examples": [
+              {
+                "code": "<TestInput></TestInput>"
+              }
+            ]
+          },
+          "info": {
+            "dirPath": "src/components/TestInput",
+            "documentation": {
+              "path": "src/components/TestInput/TestInput.md"
+            },
+            "implementation": {
+              "framework": "reactjs",
+              "lang": "javascript",
+              "path": "src/components/TestInput/TestInput.js"
+            },
+            "presets": [
+              {
+                "path": "src/components/TestInput/presets/0-default.jsx"
+              }
+            ]
+          },
+          "name": "TestInput",
+          "presets": [
+            {
+              "elements": {
+                "TestInput": {
+                  "name": "TestInput",
+                  "props": {
+                    "placeholder": "Test Input"
+                  }
+                }
+              },
+              "name": "default",
+              "rootId": "TestInput"
+            }
+          ],
+          "properties": [
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "placeholder",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            }
+          ],
+          "wrappers": []
+        }
+      ],
+      "name": "Forms"
+    }
+  ],
+  "name": "StencilJS Merge Implementation",
+  "vcs": {
+    "branchName": "master",
+    "commitHash": "00fd6819c61b9d49e22ad098fe11480e92acc79f"
+  }
+}

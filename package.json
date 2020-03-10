@@ -1,0 +1,15 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build:stencil": "lerna run --stream --scope components build",
+    "start:stencil": "lerna run --stream --scope components start",
+    "start:uxpin": "yarn build:stencil && lerna run --stream --scope components-uxpin start:uxpin"
+  },
+  "devDependencies": {
+    "lerna": "^3.16.4"
+  }
+}
