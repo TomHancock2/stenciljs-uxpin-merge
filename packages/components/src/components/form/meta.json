@@ -1,0 +1,12 @@
+{
+    "name": "form",
+    "tagName": "example-form",
+    "lastUpdated": "v1.17.1",
+    "componentGroup": "Form",
+    "status": {
+        "oneui": "unavailable",
+        "webComponent": "available",
+        "react": "available",
+        "angular": "unavailable"
+    }
+}

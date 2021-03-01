@@ -6,50 +6,490 @@
           "documentation": {
             "examples": [
               {
-                "code": "<TestField></TestField>"
+                "code": "<ExampleForm></ExampleForm>"
               }
             ]
           },
           "info": {
-            "dirPath": "src/components/TestField",
+            "dirPath": "src/components/ExampleForm",
             "documentation": {
-              "path": "src/components/TestField/TestField.md"
+              "path": "src/components/ExampleForm/ExampleForm.md"
             },
             "implementation": {
               "framework": "reactjs",
               "lang": "javascript",
-              "path": "src/components/TestField/TestField.js"
+              "path": "src/components/ExampleForm/ExampleForm.js"
             },
             "presets": [
               {
-                "path": "src/components/TestField/presets/0-default.jsx"
+                "path": "src/components/ExampleForm/presets/0-default.jsx"
               }
             ]
           },
-          "name": "TestField",
+          "name": "ExampleForm",
           "presets": [
             {
               "elements": {
-                "TestField": {
-                  "name": "TestField",
+                "ExampleForm": {
+                  "name": "ExampleForm",
                   "props": {
                     "children": [
                       {
-                        "uxpinPresetElementId": "TestFiled.TestInput"
+                        "uxpinPresetElementId": "ExampleForm.ExampleField"
                       }
                     ]
                   }
                 },
-                "TestFiled.TestInput": {
-                  "name": "TestInput",
+                "ExampleForm.ExampleField": {
+                  "name": "ExampleField",
+                  "props": {
+                    "children": [
+                      {
+                        "uxpinPresetElementId": "ExampleForm.ExampleField.ExampleInput"
+                      }
+                    ],
+                    "hint": "Hint Text",
+                    "label": "New field"
+                  }
+                },
+                "ExampleForm.ExampleField.ExampleInput": {
+                  "name": "ExampleInput",
                   "props": {}
                 }
               },
               "name": "default",
-              "rootId": "TestField"
+              "rootId": "ExampleForm"
             }
           ],
           "properties": [
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "acceptCharset",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "action",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "allowRedirect",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "autocomplete",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "disabledClearOnSubmit",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "disabledValidation",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "enctype",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "errorSummaryHeadingText",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "errorSummaryHeadingLevel",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "hiddenErrorSummary",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "method",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "get"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "post"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "name",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "optionalLabels",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "patternMismatch",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "rangeOverflow",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "rangeUnderflow",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "stepMismatch",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "tooLong",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "tooShort",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "typeMismatch",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "valueMissing",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "onSubmit",
+              "type": {
+                "name": "func",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "onError",
+              "type": {
+                "name": "func",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "children",
+              "type": {
+                "name": "node",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "header",
+              "type": {
+                "name": "node",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "footer",
+              "type": {
+                "name": "node",
+                "structure": {}
+              }
+            }
+          ],
+          "wrappers": [
+            {
+              "name": "SkipContainerWrapper",
+              "type": "builtIn"
+            }
+          ]
+        },
+        {
+          "documentation": {
+            "examples": [
+              {
+                "code": "<ExampleField label=\"Field\" hint=\"A wrapper for form components\"></ExampleField>"
+              }
+            ]
+          },
+          "info": {
+            "dirPath": "src/components/ExampleField",
+            "documentation": {
+              "path": "src/components/ExampleField/ExampleField.md"
+            },
+            "implementation": {
+              "framework": "reactjs",
+              "lang": "javascript",
+              "path": "src/components/ExampleField/ExampleField.js"
+            },
+            "presets": [
+              {
+                "path": "src/components/ExampleField/presets/0-default.jsx"
+              }
+            ]
+          },
+          "name": "ExampleField",
+          "presets": [],
+          "properties": [
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "error",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "hiddenLabel",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "hint",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "inline",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "label",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "join",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "optional",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "optionalText",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "patternMismatch",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "rangeOverflow",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "rangeUnderflow",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "stepMismatch",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "tooLong",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "tooShort",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "typeMismatch",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "valueMissing",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
             {
               "description": "",
               "isRequired": false,
@@ -60,48 +500,251 @@
               }
             }
           ],
-          "wrappers": []
+          "wrappers": [
+            {
+              "name": "SkipContainerWrapper",
+              "type": "builtIn"
+            }
+          ]
         },
         {
           "documentation": {
             "examples": [
               {
-                "code": "<TestInput></TestInput>"
+                "code": "<ExampleInput></ExampleInput>"
               }
             ]
           },
           "info": {
-            "dirPath": "src/components/TestInput",
+            "dirPath": "src/components/ExampleInput",
             "documentation": {
-              "path": "src/components/TestInput/TestInput.md"
+              "path": "src/components/ExampleInput/ExampleInput.md"
             },
             "implementation": {
               "framework": "reactjs",
               "lang": "javascript",
-              "path": "src/components/TestInput/TestInput.js"
+              "path": "src/components/ExampleInput/ExampleInput.js"
             },
             "presets": [
               {
-                "path": "src/components/TestInput/presets/0-default.jsx"
+                "path": "src/components/ExampleInput/presets/0-default.jsx"
               }
             ]
           },
-          "name": "TestInput",
+          "name": "ExampleInput",
           "presets": [
             {
               "elements": {
-                "TestInput": {
-                  "name": "TestInput",
+                "ExampleInput": {
+                  "name": "ExampleInput",
                   "props": {
-                    "placeholder": "Test Input"
+                    "placeholder": "Example Design System"
                   }
                 }
               },
               "name": "default",
-              "rootId": "TestInput"
+              "rootId": "ExampleInput"
             }
           ],
           "properties": [
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "autocomplete",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "on"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "off"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "autocorrect",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "on"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "off"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "clearable",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "hiddenlabel",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "inputmode",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "none"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "text"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "tel"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "url"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "email"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "numeric"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "decimal"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "search"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "multiinputlabel",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "max",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "maxlength",
+              "type": {
+                "name": "number",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "min",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "minlength",
+              "type": {
+                "name": "number",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "name",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "optional",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "pattern",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
             {
               "description": "",
               "isRequired": false,
@@ -110,17 +753,266 @@
                 "name": "string",
                 "structure": {}
               }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "readonly",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "required",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "rows",
+              "type": {
+                "name": "number",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "step",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "type",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "date"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "email"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "number"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "password"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "search"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "tel"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "text"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "url"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "time"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "value",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "watermark",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "width",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "2"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "3"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "4"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "5"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "6"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "7"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "8"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "9"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "10"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "onChange",
+              "type": {
+                "name": "func",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "onBlur",
+              "type": {
+                "name": "func",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "onFocus",
+              "type": {
+                "name": "func",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "onInput",
+              "type": {
+                "name": "func",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "onKeyDown",
+              "type": {
+                "name": "func",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "onClear",
+              "type": {
+                "name": "func",
+                "structure": {}
+              }
             }
           ],
-          "wrappers": []
+          "wrappers": [
+            {
+              "name": "SkipContainerWrapper",
+              "type": "builtIn"
+            }
+          ]
         }
       ],
       "name": "Forms"
     }
   ],
-  "name": "StencilJS Merge Implementation",
+  "name": "Example Design System",
   "vcs": {
     "branchName": "master",
-    "commitHash": "00fd6819c61b9d49e22ad098fe11480e92acc79f"
+    "commitHash": "f74aa9f1b353e6adb68fc6c7044f35a27d054705",
+    "paths": {
+      "configPath": "/Users/tom.hancock/Development/tomhancock2/stenciljs-uxpin-merge/packages/components-uxpin/uxpin.config.js",
+      "projectRoot": "/Users/tom.hancock/Development/tomhancock2/stenciljs-uxpin-merge/packages/components-uxpin"
+    }
   }
 }

@@ -1,0 +1,26 @@
+/** Input variables
+ * --------------------------------------------------
+ */
+
+:host {
+    --example-border-size: var(--example-input-border-size, 1px);
+    --example-border-color: var(--example-input-border-color, var(--example-border-color--form-control, var(--example-default-border-color--a11y, purple)));
+    --example-border-color--focus: var(--example-input-border-color--focus, var(--example-global-focus-color, var(--example-default-blue)));
+    --example-box-shadow--focus: var(--example-global-focus-indicator, var(--example-default-focus-indicator));
+    --example-border-radius: var(--example-input-border-radius, var(--example-global-border-radius, var(--example-default-border-radius)));
+    --example-font-size: var(--example-input-font-size, 1rem);
+    --example-color: var(--example-input-color, var(--example-global-text-color, inherit));
+    --example-color--focus: var(--example-input-color--focus, var(--example-global-text-color, inherit));
+    --example-watermark-color: var(--example-input-watermark-color, var(--example-default-text-color--placeholder));
+    --example-placeholder-color: var(--example-input-placeholder-color, var(--example-default-text-color--placeholder));
+    --example-padding-x: var(
+        --example-input-padding-x,
+        var(--example-default-spacing--2x)
+    ); /* Needs to include units if set to zero as it's used in a calc function */
+    --example-padding-y: var(--example-input-padding-y, var(--example-default-spacing--2x));
+    --example-background-color: var(--example-input-background-color, var(--example-default-background-color));
+    --example-background-color--focus: var(--example-input-background-color--focus, var(--example-background-color));
+    --example-transition: var(--example-input-transition, none);
+    --example-label-padding-bottom: var(--example-input-label-padding-bottom, var(--example-default-spacing));
+    --example-min-height: var(--example-input-min-height, var(--example-default-min-height));
+}

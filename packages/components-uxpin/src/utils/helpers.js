@@ -1,17 +1,21 @@
-import { 
-   TestField,
-   TestInput,
-   TestLabel
-} from 'components/dist/custom-elements-bundle/index.mjs';
+import {
+    ExampleField as ExampleFieldCE,
+    ExampleForm as ExampleFormCE,
+    ExampleInput as ExampleInputCE,
+    ExampleLabel as ExampleLabelCE,
+} from 'components/dist/custom-elements/index.js';
 
 export const setUpCustomElements = () => {
-    if(!window.customElements.get('test-field'))  {
-        window.customElements.define('test-field', TestField)
+    if (!window.customElements.get('example-field')) {
+        window.customElements.define('example-field', ExampleFieldCE);
     }
-    if(!window.customElements.get('test-label'))  {
-        window.customElements.define('test-label', TestLabel)
+    if (!window.customElements.get('example-label')) {
+        window.customElements.define('example-label', ExampleLabelCE);
     }
-    if(!window.customElements.get('test-input')) {
-        window.customElements.define('test-input', TestInput);
+    if (!window.customElements.get('example-form')) {
+        window.customElements.define('example-form', ExampleFormCE);
+    }
+    if (!window.customElements.get('example-input')) {
+        window.customElements.define('example-input', ExampleInputCE);
     }
 };

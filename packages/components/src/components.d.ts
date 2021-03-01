@@ -5,61 +5,736 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { FormData, FormFieldStatus, HeadingLevel, InputEventStatus, OnOff, SelectWidth, TextFieldType, ValidationMessage } from "./utils/interfaces";
+import { NativeFormElement } from "./components/field/field.types";
+import { FormMethod } from "./components/form/form.types";
+import { InputMode, InputVRTState, InputWidth, NativeInputElement } from "./components/input/input.types";
 export namespace Components {
-    interface TestField {
+    interface ExampleField {
+        /**
+          * Setting to true will disable the validation on the field
+         */
+        "disabledValidation"?: boolean;
+        /**
+          * Error text for when using as a controlled component
+         */
+        "error"?: string;
+        /**
+          * Visually hides the label text, but still available to screenreaders
+         */
+        "hiddenLabel"?: boolean;
+        /**
+          * Text to be displayed as supporting field description
+         */
+        "hint"?: string;
+        /**
+          * Displays multiple children in line rather than stacked.
+         */
+        "inline"?: boolean;
+        /**
+          * Renders a fieldset if set to true
+         */
+        "inputGroup"?: boolean;
+        /**
+          * Removes margin from inline child components. Only activates when inline prop is also set.
+         */
+        "join"?: boolean;
+        /**
+          * Text to be displayed in the label. This can form part of error messages to make sure it makes sense in this context
+         */
+        "label": string;
+        /**
+          * Text that is added to a label to mark a field as optional
+         */
+        "optionalText"?: string;
+        /**
+          * Error message to be displayed when the characters does fulfil the pattern provided by the `pattern` prop. Defaults to HTML5 default message.
+         */
+        "patternMismatch"?: string;
+        /**
+          * Error message to be displayed when the number value exceed the `max` property. Defaults to HTML5 default message.
+         */
+        "rangeOverflow"?: string;
+        /**
+          * Error message to be displayed when the number value is lower than the `min` property. Defaults to HTML5 default message.
+         */
+        "rangeUnderflow"?: string;
+        /**
+          * Registers input elements within field
+         */
+        "registerInputElement": (fieldData: InputEventStatus | FormFieldStatus) => Promise<void>;
+        /**
+          * Resets field to initial state
+         */
+        "resetField": () => Promise<void>;
+        /**
+          * Error message to be displayed when the number of characters exceed the `maxlength` property. Defaults to HTML5 default message.
+         */
+        "stepMismatch"?: string;
+        /**
+          * Error message to be displayed when the number of characters exceed the `maxlength` property. Defaults to HTML5 default message.
+         */
+        "tooLong"?: string;
+        /**
+          * Error message to be displayed when there are not enough characters to equal or exceed the `minlength` property. Defaults to HTML5 default message.
+         */
+        "tooShort"?: string;
+        /**
+          * Error message to be displayed when the field value is not the correct syntax. Defaults to HTML5 default message.
+         */
+        "typeMismatch"?: string;
+        /**
+          * Unregisters input elements within field
+         */
+        "unregisterInputElement": (fieldData: FormFieldStatus | InputEventStatus) => Promise<void>;
+        /**
+          * Validates the form elements
+         */
+        "validateField": () => Promise<void>;
+        /**
+          * Error message to be displayed when the input is required and no value has been entered. Defaults to HTML5 default message.
+         */
+        "valueMissing"?: string;
     }
-    interface TestInput {
-        "placeholder"?: string;
+    interface ExampleForm {
+        /**
+          * A space- or comma-delimited list of character encodings that the server accepts
+         */
+        "acceptCharset"?: string;
+        /**
+          * The URI of a program that processes the form information
+         */
+        "action"?: string;
+        /**
+          * If set to true, the form will submit to the server, if false, that default behavior will be prevented and an ajax call can be made
+         */
+        "allowRedirect"?: boolean;
+        /**
+          * Indicates whether input elements can by default have their values automatically completed by the browser
+         */
+        "autocomplete"?: OnOff;
+        /**
+          * Sets whether to use clear the form when successfully submitted or not. Setting to true will leave the form fields populated.
+         */
+        "disabledClearOnSubmit"?: boolean;
+        /**
+          * Sets whether to use default HTML 5 validation or not. Setting to true will allow consumers to use their own validation engine
+         */
+        "disabledValidation"?: boolean;
+        /**
+          * When the value of the method attribute is post, enctype is the MIME type of content that is used to submit the form to the server
+         */
+        "enctype"?: string;
+        /**
+          * Level of error summary heading for semantics
+         */
+        "errorSummaryHeadingLevel"?: HeadingLevel;
+        /**
+          * Text to be displayed in the title of the error summary
+         */
+        "errorSummaryHeadingText"?: string;
+        /**
+          * Sets whether to show the error summary on submit. Will be ignored if validate is false
+         */
+        "hiddenErrorSummary"?: boolean;
+        /**
+          * The HTTP method that the browser uses to submit the form
+         */
+        "method"?: FormMethod;
+        /**
+          * Name of the form
+         */
+        "name"?: string;
+        /**
+          * When set to true, labels show an 'optional' label and not a required label
+         */
+        "optionalLabels"?: boolean;
+        /**
+          * Error message to be displayed when the characters does fulfil the pattern provided by the `pattern` prop. {{fieldName}} is replaced by the text from the field's `label`
+         */
+        "patternMismatch"?: string;
+        /**
+          * Error message to be displayed when the number value exceed the `max` property. {{fieldName}} and {{attrValue}} are replaced by the text from the field's `label` and the value of `max` respectively.
+         */
+        "rangeOverflow"?: string;
+        /**
+          * Error message to be displayed when the number value is lower than the `min` property. {{fieldName}} and {{attrValue}} are replaced by the text from the field's `label` and the value of `min` respectively.
+         */
+        "rangeUnderflow"?: string;
+        /**
+          * Programatically reset the form
+         */
+        "reset": () => Promise<void>;
+        /**
+          * Error message to be displayed when the number of characters exceed the `maxlength` property. {{fieldName}} and {{attrValue}} are replaced by the text from the field's `label` and the value of `maxlength` respectively.
+         */
+        "stepMismatch"?: string;
+        /**
+          * Programatically submit the form
+         */
+        "submit": () => Promise<void>;
+        /**
+          * A name or keyword indicating where to display the response that is received after submitting the form
+         */
+        "target"?: string;
+        /**
+          * Error message to be displayed when the number of characters exceed the `maxlength` property. {{fieldName}} and {{attrValue}} are replaced by the text from the field's `label` and the value of `maxlength` respectively.
+         */
+        "tooLong"?: string;
+        /**
+          * Error message to be displayed when there are not enough characters to equal or exceed the `minlength` property. {{fieldName}} and {{attrValue}} are replaced by the text from the field's `label` and the value of `minlength` respectively.
+         */
+        "tooShort"?: string;
+        /**
+          * Error message to be displayed when the field value is not the correct syntax. {{fieldName}} is replaced by the text from the field's `label`
+         */
+        "typeMismatch"?: string;
+        /**
+          * Error message to be displayed when the input is required and no value has been entered. {{fieldName}} is replaced by the text from the field's `label`
+         */
+        "valueMissing"?: string;
     }
-    interface TestLabel {
+    interface ExampleInput {
+        /**
+          * Indicates whether the value of the control can be automatically completed by the browser.
+         */
+        "autocomplete"?: OnOff | string;
+        /**
+          * Whether auto correction should be enabled when the user is entering/editing the text value.
+         */
+        "autocorrect"?: OnOff;
+        /**
+          * If `true`, then user can clear the value of the input. Will be ignored if `rows` prop is in use.
+         */
+        "clearable"?: boolean;
+        /**
+          * Gets the input HTML element.
+         */
+        "getNativeElement": () => Promise<NativeInputElement>;
+        /**
+          * Visually hides the label (if set), label will still be read out by screenreaders
+         */
+        "hiddenLabel"?: boolean;
+        /**
+          * A hint to the browser for which keyboard to display. Possible values: `"none"`, `"text"`, `"tel"`, `"url"`, `"email"`, `"numeric"`, `"decimal"`, and `"search"`.
+         */
+        "inputmode"?: InputMode;
+        /**
+          * Sets a role of "combobox" on the HTML input. Only needed for autocomplete controls.
+         */
+        "isAutocomplete"?: boolean;
+        /**
+          * Sets the aria-expanded attribute on the HTML input. Only needed for autocomplete controls, and should be dynamically set to true when search results are shown
+         */
+        "isExpanded"?: boolean;
+        /**
+          * The maximum value, which must not be less than its minimum (min attribute) value.
+         */
+        "max"?: string;
+        /**
+          * If the value of the type attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, this attribute specifies the maximum number of characters that the user can enter.
+         */
+        "maxlength"?: number;
+        /**
+          * The minimum value, which must not be greater than its maximum (max attribute) value.
+         */
+        "min"?: string;
+        /**
+          * If the value of the type attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, this attribute specifies the minimum number of characters that the user can enter.
+         */
+        "minlength"?: number;
+        /**
+          * Label text to be used when there are multiple inputs in one field
+         */
+        "multiInputLabel"?: string;
+        /**
+          * The name of the control, which is submitted with the form data.
+         */
+        "name"?: string;
+        /**
+          * If `true`, the (optional) text is shown in the label. Will be ignored if `required` is set to `true`
+         */
+        "optional"?: boolean;
+        /**
+          * A regular expression that the value is checked against. The pattern must match the entire value, not just some subset. Use the `hint` attribute on the field component to give the user extra information about the pattern. This attribute applies when the value of the type attribute is `"text"`, `"search"`, `"tel"`, `"url"`, `"email"`, or `"password"`, otherwise it is ignored.
+         */
+        "pattern"?: string;
+        /**
+          * Instructional text that shows before the input has a value.
+         */
+        "placeholder"?: string | null;
+        /**
+          * If `true`, the user cannot modify the value.
+         */
+        "readonly"?: boolean;
+        /**
+          * If `true`, the user must fill in a value before submitting a form.
+         */
+        "required"?: boolean;
+        /**
+          * Resets the input to its original state.
+         */
+        "reset": () => Promise<void>;
+        /**
+          * Number of rows in the textarea (when set the component renders a textarea element)
+         */
+        "rows"?: number;
+        /**
+          * Works with the min and max attributes to limit the increments at which a value can be set. Possible values are: `"any"` or a positive floating point number.
+         */
+        "step"?: string;
+        /**
+          * The type of control to display. The default type is text.
+         */
+        "type"?: TextFieldType;
+        /**
+          * Validates the input.
+         */
+        "validate": () => Promise<void>;
+        /**
+          * The value of the input.
+         */
+        "value"?: string | null;
+        /**
+          * **For testing purposes** Interaction state of the input
+         */
+        "vrtState"?: InputVRTState;
+        /**
+          * When set to `true` add ons will render with a different style. Will be ignored if `prepend` or `append` slots are not being used.
+         */
+        "watermark"?: boolean;
+        /**
+          * The width of the input.
+         */
+        "width"?: InputWidth | SelectWidth;
+    }
+    interface ExampleLabel {
+        /**
+          * When true, element in the `for` will be focused on (for CheckboxGroup and RadioGroup)
+         */
+        "focusOn"?: boolean;
+        /**
+          * Id of input that the label is labelling
+         */
+        "for": string;
+        /**
+          * Visually hides the label text, but still available to screen readers
+         */
+        "hiddenLabel": boolean;
+        /**
+          * Text to be displayed in the label. This can form part of error messages to make sure it makes sense in this context
+         */
+        "labelText": string;
+        /**
+          * When set to true, the text '(optional)' is displayed next to the label text. Will be ignored if `required` is `true`
+         */
+        "optional": boolean;
+        /**
+          * Text that is read by a screen reader for a required field
+         */
+        "optionalText": string;
+        /**
+          * When set to true, the 'required asterisk (*)' is displayed next to the label text
+         */
+        "required": boolean;
     }
 }
 declare global {
-    interface HTMLTestFieldElement extends Components.TestField, HTMLStencilElement {
+    interface HTMLExampleFieldElement extends Components.ExampleField, HTMLStencilElement {
     }
-    var HTMLTestFieldElement: {
-        prototype: HTMLTestFieldElement;
-        new (): HTMLTestFieldElement;
+    var HTMLExampleFieldElement: {
+        prototype: HTMLExampleFieldElement;
+        new (): HTMLExampleFieldElement;
     };
-    interface HTMLTestInputElement extends Components.TestInput, HTMLStencilElement {
+    interface HTMLExampleFormElement extends Components.ExampleForm, HTMLStencilElement {
     }
-    var HTMLTestInputElement: {
-        prototype: HTMLTestInputElement;
-        new (): HTMLTestInputElement;
+    var HTMLExampleFormElement: {
+        prototype: HTMLExampleFormElement;
+        new (): HTMLExampleFormElement;
     };
-    interface HTMLTestLabelElement extends Components.TestLabel, HTMLStencilElement {
+    interface HTMLExampleInputElement extends Components.ExampleInput, HTMLStencilElement {
     }
-    var HTMLTestLabelElement: {
-        prototype: HTMLTestLabelElement;
-        new (): HTMLTestLabelElement;
+    var HTMLExampleInputElement: {
+        prototype: HTMLExampleInputElement;
+        new (): HTMLExampleInputElement;
+    };
+    interface HTMLExampleLabelElement extends Components.ExampleLabel, HTMLStencilElement {
+    }
+    var HTMLExampleLabelElement: {
+        prototype: HTMLExampleLabelElement;
+        new (): HTMLExampleLabelElement;
     };
     interface HTMLElementTagNameMap {
-        "test-field": HTMLTestFieldElement;
-        "test-input": HTMLTestInputElement;
-        "test-label": HTMLTestLabelElement;
+        "example-field": HTMLExampleFieldElement;
+        "example-form": HTMLExampleFormElement;
+        "example-input": HTMLExampleInputElement;
+        "example-label": HTMLExampleLabelElement;
     }
 }
 declare namespace LocalJSX {
-    interface TestField {
+    interface ExampleField {
+        /**
+          * Setting to true will disable the validation on the field
+         */
+        "disabledValidation"?: boolean;
+        /**
+          * Error text for when using as a controlled component
+         */
+        "error"?: string;
+        /**
+          * Visually hides the label text, but still available to screenreaders
+         */
+        "hiddenLabel"?: boolean;
+        /**
+          * Text to be displayed as supporting field description
+         */
+        "hint"?: string;
+        /**
+          * Displays multiple children in line rather than stacked.
+         */
+        "inline"?: boolean;
+        /**
+          * Renders a fieldset if set to true
+         */
+        "inputGroup"?: boolean;
+        /**
+          * Removes margin from inline child components. Only activates when inline prop is also set.
+         */
+        "join"?: boolean;
+        /**
+          * Text to be displayed in the label. This can form part of error messages to make sure it makes sense in this context
+         */
+        "label"?: string;
+        /**
+          * Emitted when an input loads
+         */
+        "onExampleFieldDidLoad"?: (event: CustomEvent<any>) => void;
+        /**
+          * Emitted when an input is removed
+         */
+        "onExampleFieldDidUnload"?: (event: CustomEvent<any>) => void;
+        /**
+          * Text that is added to a label to mark a field as optional
+         */
+        "optionalText"?: string;
+        /**
+          * Error message to be displayed when the characters does fulfil the pattern provided by the `pattern` prop. Defaults to HTML5 default message.
+         */
+        "patternMismatch"?: string;
+        /**
+          * Error message to be displayed when the number value exceed the `max` property. Defaults to HTML5 default message.
+         */
+        "rangeOverflow"?: string;
+        /**
+          * Error message to be displayed when the number value is lower than the `min` property. Defaults to HTML5 default message.
+         */
+        "rangeUnderflow"?: string;
+        /**
+          * Error message to be displayed when the number of characters exceed the `maxlength` property. Defaults to HTML5 default message.
+         */
+        "stepMismatch"?: string;
+        /**
+          * Error message to be displayed when the number of characters exceed the `maxlength` property. Defaults to HTML5 default message.
+         */
+        "tooLong"?: string;
+        /**
+          * Error message to be displayed when there are not enough characters to equal or exceed the `minlength` property. Defaults to HTML5 default message.
+         */
+        "tooShort"?: string;
+        /**
+          * Error message to be displayed when the field value is not the correct syntax. Defaults to HTML5 default message.
+         */
+        "typeMismatch"?: string;
+        /**
+          * Error message to be displayed when the input is required and no value has been entered. Defaults to HTML5 default message.
+         */
+        "valueMissing"?: string;
     }
-    interface TestInput {
-        "placeholder"?: string;
+    interface ExampleForm {
+        /**
+          * A space- or comma-delimited list of character encodings that the server accepts
+         */
+        "acceptCharset"?: string;
+        /**
+          * The URI of a program that processes the form information
+         */
+        "action"?: string;
+        /**
+          * If set to true, the form will submit to the server, if false, that default behavior will be prevented and an ajax call can be made
+         */
+        "allowRedirect"?: boolean;
+        /**
+          * Indicates whether input elements can by default have their values automatically completed by the browser
+         */
+        "autocomplete"?: OnOff;
+        /**
+          * Sets whether to use clear the form when successfully submitted or not. Setting to true will leave the form fields populated.
+         */
+        "disabledClearOnSubmit"?: boolean;
+        /**
+          * Sets whether to use default HTML 5 validation or not. Setting to true will allow consumers to use their own validation engine
+         */
+        "disabledValidation"?: boolean;
+        /**
+          * When the value of the method attribute is post, enctype is the MIME type of content that is used to submit the form to the server
+         */
+        "enctype"?: string;
+        /**
+          * Level of error summary heading for semantics
+         */
+        "errorSummaryHeadingLevel"?: HeadingLevel;
+        /**
+          * Text to be displayed in the title of the error summary
+         */
+        "errorSummaryHeadingText"?: string;
+        /**
+          * Sets whether to show the error summary on submit. Will be ignored if validate is false
+         */
+        "hiddenErrorSummary"?: boolean;
+        /**
+          * The HTTP method that the browser uses to submit the form
+         */
+        "method"?: FormMethod;
+        /**
+          * Name of the form
+         */
+        "name"?: string;
+        /**
+          * Emitted when the value has changed. Contains an `NameValueArray` where `name` and `value` are the `id` of the field and the associated error message.
+         */
+        "onExampleFormInvalid"?: (event: CustomEvent<ValidationMessage[]>) => void;
+        /**
+          * Emitted when the value has changed. Contains a object element name and values.
+         */
+        "onExampleFormSubmit"?: (event: CustomEvent<FormData>) => void;
+        /**
+          * When set to true, labels show an 'optional' label and not a required label
+         */
+        "optionalLabels"?: boolean;
+        /**
+          * Error message to be displayed when the characters does fulfil the pattern provided by the `pattern` prop. {{fieldName}} is replaced by the text from the field's `label`
+         */
+        "patternMismatch"?: string;
+        /**
+          * Error message to be displayed when the number value exceed the `max` property. {{fieldName}} and {{attrValue}} are replaced by the text from the field's `label` and the value of `max` respectively.
+         */
+        "rangeOverflow"?: string;
+        /**
+          * Error message to be displayed when the number value is lower than the `min` property. {{fieldName}} and {{attrValue}} are replaced by the text from the field's `label` and the value of `min` respectively.
+         */
+        "rangeUnderflow"?: string;
+        /**
+          * Error message to be displayed when the number of characters exceed the `maxlength` property. {{fieldName}} and {{attrValue}} are replaced by the text from the field's `label` and the value of `maxlength` respectively.
+         */
+        "stepMismatch"?: string;
+        /**
+          * A name or keyword indicating where to display the response that is received after submitting the form
+         */
+        "target"?: string;
+        /**
+          * Error message to be displayed when the number of characters exceed the `maxlength` property. {{fieldName}} and {{attrValue}} are replaced by the text from the field's `label` and the value of `maxlength` respectively.
+         */
+        "tooLong"?: string;
+        /**
+          * Error message to be displayed when there are not enough characters to equal or exceed the `minlength` property. {{fieldName}} and {{attrValue}} are replaced by the text from the field's `label` and the value of `minlength` respectively.
+         */
+        "tooShort"?: string;
+        /**
+          * Error message to be displayed when the field value is not the correct syntax. {{fieldName}} is replaced by the text from the field's `label`
+         */
+        "typeMismatch"?: string;
+        /**
+          * Error message to be displayed when the input is required and no value has been entered. {{fieldName}} is replaced by the text from the field's `label`
+         */
+        "valueMissing"?: string;
     }
-    interface TestLabel {
+    interface ExampleInput {
+        /**
+          * Indicates whether the value of the control can be automatically completed by the browser.
+         */
+        "autocomplete"?: OnOff | string;
+        /**
+          * Whether auto correction should be enabled when the user is entering/editing the text value.
+         */
+        "autocorrect"?: OnOff;
+        /**
+          * If `true`, then user can clear the value of the input. Will be ignored if `rows` prop is in use.
+         */
+        "clearable"?: boolean;
+        /**
+          * Visually hides the label (if set), label will still be read out by screenreaders
+         */
+        "hiddenLabel"?: boolean;
+        /**
+          * A hint to the browser for which keyboard to display. Possible values: `"none"`, `"text"`, `"tel"`, `"url"`, `"email"`, `"numeric"`, `"decimal"`, and `"search"`.
+         */
+        "inputmode"?: InputMode;
+        /**
+          * Sets a role of "combobox" on the HTML input. Only needed for autocomplete controls.
+         */
+        "isAutocomplete"?: boolean;
+        /**
+          * Sets the aria-expanded attribute on the HTML input. Only needed for autocomplete controls, and should be dynamically set to true when search results are shown
+         */
+        "isExpanded"?: boolean;
+        /**
+          * The maximum value, which must not be less than its minimum (min attribute) value.
+         */
+        "max"?: string;
+        /**
+          * If the value of the type attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, this attribute specifies the maximum number of characters that the user can enter.
+         */
+        "maxlength"?: number;
+        /**
+          * The minimum value, which must not be greater than its maximum (max attribute) value.
+         */
+        "min"?: string;
+        /**
+          * If the value of the type attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, this attribute specifies the minimum number of characters that the user can enter.
+         */
+        "minlength"?: number;
+        /**
+          * Label text to be used when there are multiple inputs in one field
+         */
+        "multiInputLabel"?: string;
+        /**
+          * The name of the control, which is submitted with the form data.
+         */
+        "name"?: string;
+        /**
+          * Emitted when the input loses focus.
+         */
+        "onExampleBlur"?: (event: CustomEvent<InputEventStatus>) => void;
+        /**
+          * Emitted when the value has changed.
+         */
+        "onExampleChange"?: (event: CustomEvent<InputEventStatus>) => void;
+        /**
+          * Emitted when the input is manually cleared.
+         */
+        "onExampleClear"?: (event: CustomEvent<InputEventStatus>) => void;
+        /**
+          * Emitted when the inputs error state changes.
+         */
+        "onExampleErrorChange"?: (event: CustomEvent<InputEventStatus>) => void;
+        /**
+          * Emitted when the input has focus.
+         */
+        "onExampleFocus"?: (event: CustomEvent<InputEventStatus>) => void;
+        /**
+          * Emitted when a keyboard input occurred.
+         */
+        "onExampleInput"?: (event: CustomEvent<KeyboardEvent>) => void;
+        /**
+          * Emitted when an input loads
+         */
+        "onExampleInputDidLoad"?: (event: CustomEvent<NativeInputElement>) => void;
+        /**
+          * Emitted when an input is removed
+         */
+        "onExampleInputDidUnload"?: (event: CustomEvent<NativeInputElement>) => void;
+        /**
+          * Emitted when a keydown event occurs.
+         */
+        "onExampleKeyDown"?: (event: CustomEvent<KeyboardEvent>) => void;
+        /**
+          * Emitted when a keyup event occurs.
+         */
+        "onExampleKeyUp"?: (event: CustomEvent<KeyboardEvent>) => void;
+        /**
+          * If `true`, the (optional) text is shown in the label. Will be ignored if `required` is set to `true`
+         */
+        "optional"?: boolean;
+        /**
+          * A regular expression that the value is checked against. The pattern must match the entire value, not just some subset. Use the `hint` attribute on the field component to give the user extra information about the pattern. This attribute applies when the value of the type attribute is `"text"`, `"search"`, `"tel"`, `"url"`, `"email"`, or `"password"`, otherwise it is ignored.
+         */
+        "pattern"?: string;
+        /**
+          * Instructional text that shows before the input has a value.
+         */
+        "placeholder"?: string | null;
+        /**
+          * If `true`, the user cannot modify the value.
+         */
+        "readonly"?: boolean;
+        /**
+          * If `true`, the user must fill in a value before submitting a form.
+         */
+        "required"?: boolean;
+        /**
+          * Number of rows in the textarea (when set the component renders a textarea element)
+         */
+        "rows"?: number;
+        /**
+          * Works with the min and max attributes to limit the increments at which a value can be set. Possible values are: `"any"` or a positive floating point number.
+         */
+        "step"?: string;
+        /**
+          * The type of control to display. The default type is text.
+         */
+        "type"?: TextFieldType;
+        /**
+          * The value of the input.
+         */
+        "value"?: string | null;
+        /**
+          * **For testing purposes** Interaction state of the input
+         */
+        "vrtState"?: InputVRTState;
+        /**
+          * When set to `true` add ons will render with a different style. Will be ignored if `prepend` or `append` slots are not being used.
+         */
+        "watermark"?: boolean;
+        /**
+          * The width of the input.
+         */
+        "width"?: InputWidth | SelectWidth;
+    }
+    interface ExampleLabel {
+        /**
+          * When true, element in the `for` will be focused on (for CheckboxGroup and RadioGroup)
+         */
+        "focusOn"?: boolean;
+        /**
+          * Id of input that the label is labelling
+         */
+        "for"?: string;
+        /**
+          * Visually hides the label text, but still available to screen readers
+         */
+        "hiddenLabel"?: boolean;
+        /**
+          * Text to be displayed in the label. This can form part of error messages to make sure it makes sense in this context
+         */
+        "labelText": string;
+        /**
+          * When set to true, the text '(optional)' is displayed next to the label text. Will be ignored if `required` is `true`
+         */
+        "optional"?: boolean;
+        /**
+          * Text that is read by a screen reader for a required field
+         */
+        "optionalText"?: string;
+        /**
+          * When set to true, the 'required asterisk (*)' is displayed next to the label text
+         */
+        "required"?: boolean;
     }
     interface IntrinsicElements {
-        "test-field": TestField;
-        "test-input": TestInput;
-        "test-label": TestLabel;
+        "example-field": ExampleField;
+        "example-form": ExampleForm;
+        "example-input": ExampleInput;
+        "example-label": ExampleLabel;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "test-field": LocalJSX.TestField & JSXBase.HTMLAttributes<HTMLTestFieldElement>;
-            "test-input": LocalJSX.TestInput & JSXBase.HTMLAttributes<HTMLTestInputElement>;
-            "test-label": LocalJSX.TestLabel & JSXBase.HTMLAttributes<HTMLTestLabelElement>;
+            "example-field": LocalJSX.ExampleField & JSXBase.HTMLAttributes<HTMLExampleFieldElement>;
+            "example-form": LocalJSX.ExampleForm & JSXBase.HTMLAttributes<HTMLExampleFormElement>;
+            "example-input": LocalJSX.ExampleInput & JSXBase.HTMLAttributes<HTMLExampleInputElement>;
+            "example-label": LocalJSX.ExampleLabel & JSXBase.HTMLAttributes<HTMLExampleLabelElement>;
         }
     }
 }

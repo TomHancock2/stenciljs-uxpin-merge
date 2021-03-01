@@ -1,0 +1,26 @@
+/** Label
+ *---------------------------------------------------
+ * @prop --example-label-color: Colour of the Label text
+ * @prop --example-label-font-size: Size of the label text
+ * @prop --example-label-font-weight: Font weight of the label text
+ * @prop --example-label-required-color: Colour of the required indicator (*)
+ * @prop --example-label-optional-color: Colour of the optional indication text (optional)
+ * @prop --example-label-meta-font-size: Font size of the label meta data (required, optional) - should be in `em` so it is relative to label font size
+ * @prop --example-label-meta-font-style: Font style of the label meta data (required, optional)
+ */
+
+:host {
+    --example-color: var(--example-label-color, inherit);
+    --example-font-size: var(--example-label-font-size, inherit);
+    --example-font-weight--label: var(--example-label-font-weight, bold);
+    --example-font-weight--required: var(--example-font-weight-base-bold, bold);
+    --example-font-weight--optional: var(--example-font-weight-base-light, inherit);
+    --example-required-color: var(--example-label-required-color, var(--example-default-red));
+    --example-optional-color: var(--example-label-optional-color, var(--example-default-text-color--light));
+    --example-meta-font-size: var(--example-label-meta-font-size, 0.875em);
+    --example-meta-font-style: var(--example-label-meta-font-style, normal);
+    --example-meta-padding-left: var(--example-spacing-xs, var(--example-default-spacing));
+    --example-margin-bottom: var(--example-spacing-xs, var(--example-default-spacing--2x));
+    --example-required-inset-top: var(--example-spacing-neg-xxs, var(--example-default-spacing--neg));
+    --example-meta-margin: var(--example-spacing-xxs, var(--example-default-spacing));
+}

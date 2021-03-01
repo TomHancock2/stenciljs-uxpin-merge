@@ -19,7 +19,21 @@ export const config: Config = {
       type: 'dist-custom-elements-bundle',
     },
   ],
-  copy: [
-    {src: 'custom-elements.mjs'}
-  ]
+  globalStyle: 'src/global/global.css',
+  testing: {
+      testPathIgnorePatterns: [
+          'node_modules',
+      ],
+      browserArgs: ['--no-sandbox', '--disable-setuid-sandbox'],
+  },
+  buildEs5: 'prod',
+  extras: {
+      dynamicImportShim: true,
+      shadowDomShim: true,
+      safari10: false,
+      scriptDataOpts: true,
+      appendChildSlotFix: false,
+      cloneNodeFix: true,
+      slotChildNodesFix: true,
+  },
 };

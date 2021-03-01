@@ -1,5 +1,0 @@
-# TestInput
-
-```javascript
-<TestInput></TestInput>
-```

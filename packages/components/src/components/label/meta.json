@@ -1,0 +1,11 @@
+{
+    "name": "label",
+    "tagName": "example-label",
+    "lastUpdated": "v1.16.1",
+    "status": {
+        "oneui": "available",
+        "webComponent": "available",
+        "react": "deprecated",
+        "angular": "unavailable"
+    }
+}

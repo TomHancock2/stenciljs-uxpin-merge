@@ -1,0 +1,87 @@
+/* Default values for component vars */
+:root {
+    /* Typography */
+    --example-default-text-color: hsl(0, 0%, 20%);
+    --example-default-text-color--light: hsl(0, 0%, 46%); /* 4.5:1 vs bg--alt */
+    --example-default-text-color--placeholder: hsl(0, 0%, 66%);
+    --example-default-text-color--alt: hsl(0, 0%, 100%);
+
+    --example-default-font-size--touch: 1rem;
+    --example-default-font-size--standard: 0.875rem;
+    --example-default-font-size--compact: 0.75rem;
+
+    --example-default-font-size: var(--example-default-font-size--touch);
+
+    /* Borders */
+    --example-default-border-color: hsl(0, 0%, 88%);
+    --example-default-border-color--a11y: hsl(0, 0%, 55%); /* 3:1 vs bg--alt */
+    --example-default-border-radius: 0;
+
+    /* Backgrounds */
+    --example-default-background-color: hsl(0, 0%, 100%);
+    --example-default-background-color--alt: hsl(0, 0%, 97%);
+    --example-default-background-color--hover: hsl(0, 0%, 92%);
+    --example-default-background-color--dark: hsl(0, 0%, 0%);
+    --example-default-background-color--dark--hover: hsl(0, 0%, 22%);
+
+    --example-default-shadow-color: hsl(0, 0%, 38%);
+
+    /* Opacity */
+    --example-default-opacity--backdrop: 0.6;
+
+    /* System colours - all have at least 4.5:1 against alt bg  */
+    --example-default-green: hsl(120, 100%, 25%);
+    --example-default-red: hsl(0, 100%, 44%);
+    --example-default-orange: hsl(25, 90%, 38%);
+    --example-default-blue: hsl(240, 100%, 50%);
+    --example-default-buy: hsl(86, 53%, 31%);
+    --example-default-sell: hsl(350, 80%, 40%);
+
+    /* Focus indicator */
+    --example-default-focus-indicator: 0 0 0 2px var(--example-default-blue);
+
+    /* Default spacing / sizing */
+    --example-default-spacing: 0.25rem;
+    --example-default-spacing--half: calc(0.5 * var(--example-default-spacing));
+    --example-default-spacing--2x: calc(2 * var(--example-default-spacing));
+    --example-default-spacing--3x: calc(3 * var(--example-default-spacing));
+    --example-default-spacing--4x: calc(4 * var(--example-default-spacing));
+    --example-default-spacing--5x: calc(5 * var(--example-default-spacing));
+    --example-default-spacing--6x: calc(6 * var(--example-default-spacing));
+    --example-default-spacing--8x: calc(8 * var(--example-default-spacing));
+    --example-default-spacing--half--neg: calc(-1 * var(--example-default-spacing--half));
+    --example-default-spacing--neg: calc(-1 * var(--example-default-spacing));
+    --example-default-spacing--2x--neg: calc(-1 * var(--example-default-spacing--2x));
+    --example-default-spacing--3x--neg: calc(-1 * var(--example-default-spacing--3x));
+    --example-default-spacing--4x--neg: calc(-1 * var(--example-default-spacing--4x));
+    --example-default-spacing--5x--neg: calc(-1 * var(--example-default-spacing--5x));
+    --example-default-spacing--6x--neg: calc(-1 * var(--example-default-spacing--6x));
+    --example-default-spacing--8x--neg: calc(-1 * var(--example-default-spacing--8x));
+    --example-default-min-height: 2.5rem;
+
+    /* Default Box Shadow */
+    --example-default-box-shadow--sm: 0 var(--example-default-spacing--half) var(--example-default-spacing--half) 0 var(--example-default-shadow-color);
+    --example-default-box-shadow--md: 0 var(--example-default-spacing) var(--example-default-spacing--2x) 0 var(--example-default-shadow-color);
+    --example-default-box-shadow--lg: 0 0 var(--example-default-spacing--8x) var(--example-default-shadow-color);
+
+    /* Default transitions */
+    --example-default-transition--enter-exit: 0.3s ease-out all;
+
+    /* Breakpoint Widths */
+    --example-default-width--sm: 375px;
+    --example-default-width--md: 768px;
+    --example-default-width--lg: 1200px;
+}
+
+/* View Mode Overrides */
+.example-view-mode-standard {
+    --example-default-font-size: 0.875rem;
+    --example-default-spacing: 0.25rem;
+    --example-default-min-height: 2.5rem;
+}
+
+.example-view-mode-compact {
+    --example-default-font-size: 0.75rem;
+    --example-default-spacing: 0.125rem;
+    --example-default-min-height: 2rem;
+}

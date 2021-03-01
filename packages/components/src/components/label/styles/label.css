@@ -1,0 +1,52 @@
+@import "./label.vars.css";
+
+:host {
+    display: block;
+}
+:host .example-label__label {
+    font-size: var(--example-font-size);
+    font-weight: var(--example-font-weight--label);
+    color: var(--example-color);
+    display: block;
+    margin-bottom: var(--example-margin-bottom);
+}
+
+/* Required and optional */
+:host .example-label__required,
+:host .example-label__optional {
+    font-style: var(--example-meta-font-style);
+    font-size: var(--example-meta-font-size);
+    display: inline-block;
+}
+:host .example-label__required {
+    color: var(--example-required-color);
+    font-weight: var(--example-font-weight--required);
+    top: var(--example-required-inset-top);
+    position: relative;
+    margin-right: var(--example-meta-margin);
+    margin-left: 0;
+}
+:host-context(*[dir="rtl"]) .example-label__required {
+    margin-left: 0.25rem;
+    margin-right: 0;
+}
+:host .example-label__optional {
+    margin-left: var(--example-meta-margin);
+    margin-right: 0;
+    color: var(--example-optional-color);
+    font-weight: var(--example-font-weight--optional);
+}
+:host-context(*[dir="rtl"]) .example-label__optional {
+    margin-right: var(--example-meta-margin);
+    margin-left: 0;
+}
+
+/* Hidden label */
+:host(.example-label--hidden) .example-label__label {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}

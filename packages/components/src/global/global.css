@@ -1,0 +1,56 @@
+/* Imported Select CSS for React Component */
+@import "./default.vars.css";
+
+/* Core styles - need to be here so they can be set via custom theme */
+html {
+    /* Need to set this so the tabs work; they need to work from global body bg */
+    --example-global-background-color: var(--example-default-background-color);
+    font-size: var(--example-global-font-size, var(--example-default-font-size));
+}
+body {
+    font-family: var(--example-global-font-family, inherit);
+    color: var(--example-global-text-color, inherit);
+    font-weight: var(--example-global-font-weight, normal);
+    background-color: var(--example-global-background-color);
+    line-height: var(--example-global-line-height);
+}
+a {
+    color: var(--example-global-link-color, var(--example-default-blue));
+}
+a:hover,
+a:focus {
+    color: var(--example-global-link-color--hover, var(--example-global-link-color, var(--example-default-blue)));
+    text-decoration: var(--example-global-link-text-decoration--hover, none);
+}
+a:focus {
+    outline: none;
+    box-shadow: var(--example-global-focus-indicator, var(--example-default-focus-indicator));
+}
+a:focus:not(:focus-visible) {
+    box-shadow: none;
+}
+a:active {
+    color: var(--example-global-link-color--active, var(--example-global-link-color, var(--example-default-blue)));
+    text-decoration: var(--example-global-link-text-decoration--active, none);
+}
+
+[data-wrapper-children].use-display-contents {
+    display: contents;
+}
+
+.example-hidden {
+    display: none;
+}
+
+.example-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    border: 0;
+}

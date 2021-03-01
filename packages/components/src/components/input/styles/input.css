@@ -1,0 +1,203 @@
+@import "./input.vars.css";
+@import "./input.sizes.css";
+
+/** Input
+ * --------------------------------------------------
+ * @prop --example-border-size: Size of input border
+ * @prop --example-border-color: Color of input border
+ * @prop --example-border-color--focus: Color of input border when focussed
+ * @prop --example-border-radius: Border radius of input
+ * @prop --example-font-size: Font size of the input
+ * @prop --example-color: Text color of the input
+ * @prop --example-placeholder-color: Text color of the input placeholder text
+ * @prop --example-watermark-color: Text color of add ons when using `watermark` prop
+ * @prop --example-padding-x: Horizonal padding of the input
+ * @prop --example-padding-y: Vertical padding of the input
+ * @prop --example-background-color: Background color of the input
+ * @prop --example-background-color--focus: Background color of the input when focussed
+ * @prop --example-transition: Transition animation for the input
+ * @prop --example-label-padding-bottom: Spacing between label and input
+ */
+
+:host(.example-input) {
+    display: block;
+    line-height: 1;
+    position: relative;
+}
+
+:host(.example-input) *,
+:host(.example-input) *::before,
+:host(.example-input) *::after {
+    box-sizing: border-box; /* Need to be specific here in case consumer is not using theme global.css */
+}
+
+:host(.example-input) .example-input__wrapper {
+    border-radius: var(--example-border-radius);
+    display: flex;
+    align-items: stretch;
+    min-height: var(--example-min-height);
+    margin: 0;
+    flex-grow: 1;
+}
+
+:host(.example-input--focus) .example-input__wrapper {
+    box-shadow: var(--example-box-shadow--focus);
+}
+
+.example-input__native-input {
+    padding-left: var(--example-padding-x);
+    padding-right: var(--example-padding-x);
+    padding-top: var(--example-padding-y);
+    padding-bottom: var(--example-padding-y);
+    border-radius: var(--example-border-radius);
+    background-color: var(--example-background-color);
+    font-size: var(--example-font-size);
+    font-family: inherit;
+    border-width: var(--example-border-size);
+    border-style: solid;
+    border-color: var(--example-border-color);
+    color: var(--example-color);
+    transition: var(--example-transition);
+    height: var(--example-min-height);
+    flex: 1 1 auto;
+    max-width: 100%;
+    min-width: 1rem;
+    width: 100%; /* Needed to override default input width of ~20 characters */
+}
+
+textarea.example-input__native-input {
+    line-height: 1.5;
+    height: auto;
+    min-height: var(--example-min-height);
+}
+
+:host(.example-input) .example-input__addon {
+    border-radius: var(--example-border-radius);
+    background-color: var(--example-background-color);
+    color: var(--example-color);
+    min-height: var(--example-min-height);
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 300;
+}
+:host(.example-input) .example-input__addon:empty {
+    display: none;
+}
+
+:host(.example-input--addon-prepend) .example-input__addon,
+:host(.example-input--addon-append) .example-input__addon,
+:host(.example-input--clearable) .example-input__addon {
+    border-width: var(--example-border-size);
+    border-style: solid;
+    border-color: var(--example-border-color);
+}
+:host(.example-input) .example-input__native-input ~ .example-input__addon {
+    border-left: none;
+}
+:host(.example-input) .example-input__addon ~ .example-input__native-input {
+    border-left: none;
+}
+:host(.example-input--focus) .example-input__addon {
+    border-color: var(--example-border-color--focus);
+}
+
+:host(.example-input) ::slotted(*) {
+    padding: 0 0.75rem;
+}
+
+:host(.example-input--textarea) .example-input__addon {
+    align-items: flex-start;
+}
+
+:host(.example-input--textarea) ::slotted(*) {
+    padding-top: 0.75rem;
+}
+
+:host(.example-input--addon-prepend) .example-input__addon:first-of-type {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+:host(.example-input--addon-prepend) .example-input__native-input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+:host(.example-input--addon-append) .example-input__addon:last-of-type {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+:host(.example-input--addon-append) .example-input__native-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Watermark styles */
+:host(.example-input--watermark) .example-input__addon {
+    color: var(--example-watermark-color);
+}
+:host(.example-input--watermark) .example-input__addon:not(:first-child) {
+    border-left: none;
+}
+:host(.example-input--watermark) .example-input__addon:not(:last-child),
+:host(.example-input--watermark) .example-input__native-input:not(:last-child) {
+    border-right: none;
+}
+
+.example-input__native-input:focus {
+    color: var(--example-color--focus);
+    border-color: var(--example-border-color--focus);
+    outline: none;
+}
+
+.example-input__native-input::placeholder {
+    color: var(--example-placeholder-color);
+}
+
+:host(.example-input--hiddenlabel) .example-input__label {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* this needs to go in field with ::slotted */
+.example-field--invalid :host(.example-input) .native-input {
+    border-color: var(--example-global-danger-color);
+}
+
+:host(.example-input--clearable) .example-input__clear::after {
+    display: block;
+    content: "×";
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: -0.275rem;
+}
+:host(.example-input--clearable) .example-input__native-input:not(:last-child) {
+    border-right: none;
+}
+:host(.example-input--clearable) .example-input__native-input + .example-input__addon {
+    border-left: none;
+}
+
+:host(.example-input--addon-append) .example-input__clear:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+:host(.example-input) input[type="search"]::-webkit-search-decoration,
+:host(.example-input) input[type="search"]::-webkit-search-cancel-button,
+:host(.example-input) input[type="search"]::-webkit-search-results-button,
+:host(.example-input) input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+/* Mozilla vendor styles */
+:not(output):-moz-ui-invalid {
+    box-shadow: none;
+}

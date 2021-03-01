@@ -4,11 +4,13 @@ module.exports = {
             {
                 name: 'Forms',
                 include: [
-                    'src/components/TestField/TestField.js',
-                    'src/components/TestInput/TestInput.js',
+                    'src/components/ExampleForm/ExampleForm.js',
+                    'src/components/ExampleField/ExampleField.js',
+                    'src/components/ExampleInput/ExampleInput.js',
                 ],
             },
         ],
+        wrapper: 'src/wrappers/ThemeWrapper.js',
     },
-    name: 'StencilJS Merge Implementation',
+    name: 'Example Design System',
 };

@@ -1,0 +1,5 @@
+# ExampleInput
+
+```javascript
+<ExampleInput></ExampleInput>
+```

@@ -1,0 +1,14 @@
+/** Form
+ * --------------------------------------------------
+ */
+
+:host .example-form__alert:empty {
+    display: contents;
+}
+:host .example-form__alert:focus {
+    outline: none;
+    box-shadow: var(--example-global-focus-indicator);
+}
+:host .example-form__header::slotted(*):last-child {
+    margin-bottom: 0;
+}

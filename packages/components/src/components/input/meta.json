@@ -1,0 +1,12 @@
+{
+    "name": "input",
+    "tagName": "example-input",
+    "lastUpdated": "v1.16.1",
+    "componentGroup": "Form",
+    "status": {
+        "oneui": "available",
+        "webComponent": "available",
+        "react": "available",
+        "angular": "unavailable"
+    }
+}

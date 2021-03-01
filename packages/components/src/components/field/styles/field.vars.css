@@ -1,0 +1,43 @@
+/** Field variables
+* --------------------------------------------------
+    * @prop --example-background-color: Background colour of the field
+    * @prop --example-background-color--focus: Background colour of the field when focused
+    * @prop --example-border-left: Left border of field
+    * @prop --example-border-color: Border colour of field
+    * @prop --example-border-color--focus: Border colour of field when focused
+    * @prop --example-hint-color: Colour of the hint text
+    * @prop --example-margin-x: Horizontal margin for the field
+    * @prop --example-multiple-elements-label-color: Colour of the multi element label
+    * @prop --example-transition: Transition animation of the field
+    * @prop --example-max-width: Max width of the field
+    * @prop --example-input-spacing-y: Spacing between multiple stacked inputs
+    * @prop --example-input-spacing-x: Spacing between multiple inline inputs
+ */
+
+:host {
+    --example-border-left: var(--example-field-border-left, 2px);
+    --example-border-color: var(--example-field-border-color, transparent);
+    --example-border-color--focus: var(--example-field-border-color--focus, var(--example-border-color));
+    --example-margin-x: var(--example-field-margin-x, 0);
+    --example-background-color: var(--example-field-background-color, transparent);
+    --example-background-color--focus: var(--example-field-background-color--focus, var(--example-background-color));
+    --example-transition: var(--example-field-transition, none);
+    --example-hint-color: var(--example-field-hint-color, var(--example-global-text-color--muted, var(--example-default-text-color--light)));
+    --example-multiple-elements-label-color: var(
+        --example-field-multiple-elements-label-color,
+        var(--example-global-text-color--muted, var(--example-default-text-color--light))
+    );
+    --example-required-color: var(--example-label-required-color, var(--example-default-red));
+    --example-color: var(--example-label-color, inherit);
+    --example-font-size: var(--example-label-font-size, inherit);
+    --example-font-weight: var(--example-label-font-weight, bold);
+    --example-max-width: 100%;
+    --example-input-spacing-y: var(--example-vertical-rhythm--4x, var(--example-spacing-md, var(--example-default-spacing--4x)));
+    --example-input-spacing-x: var(--example-horizontal-rhythm--3x, var(--example-spacing-sm, var(--example-default-spacing--3x)));
+}
+
+:host(.example-field--invalid) {
+    --example-field-spacing-left: var(--example-spacing-sm, var(--example-default-spacing--3x));
+    --example-border-color: var(--example-input-border-color--invalid, var(--example-global-danger-color, var(--example-default-red)));
+    --example-border-color--focus: var(--example-input-border-color--invalid--focus);
+}

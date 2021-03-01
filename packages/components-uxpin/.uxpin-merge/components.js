@@ -1,11 +1,13 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import TestField from '../src/components/TestField/TestField';
-import TestInput from '../src/components/TestInput/TestInput';
-import Wrapper from '../src/wrappers/Wrapper.js';
+import ExampleForm from '../src/components/ExampleForm/ExampleForm';
+import ExampleField from '../src/components/ExampleField/ExampleField';
+import ExampleInput from '../src/components/ExampleInput/ExampleInput';
+import Wrapper from '../src/wrappers/ThemeWrapper.js';
 export {
-  TestField,
-  TestInput,
+  ExampleForm,
+  ExampleField,
+  ExampleInput,
   Wrapper,
   React,
   ReactDOM,

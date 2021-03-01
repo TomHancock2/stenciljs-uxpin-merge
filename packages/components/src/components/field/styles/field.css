@@ -1,0 +1,160 @@
+@import "./field.vars.css";
+
+:host {
+    margin-left: var(--example-margin-x);
+    margin-right: var(--example-margin-x);
+    background-color: var(--example-background-color);
+    transition: var(--example-transition);
+    max-width: var(--example-max-width);
+    display: block;
+}
+
+/* Focus */
+:host:focus-within {
+    background-color: var(--example-background-color--focus);
+    border-color: var(--example-border-color--focus);
+}
+
+/* Hint text */
+:host .example-field__hint {
+    color: var(--example-hint-color);
+    font-weight: var(--example-font-weight-base-light);
+    display: block;
+}
+
+/* Required and optional */
+:host .example-label__required,
+:host .example-label__optional {
+    font-style: var(--example-meta-font-style);
+    font-size: var(--example-meta-font-size);
+    display: inline-block;
+}
+
+:host .example-label__required {
+    color: var(--example-required-color);
+    font-weight: var(--example-font-weight-base-bold, bold);
+    top: var(--example-spacing-neg-xxs, -0.25rem);
+    position: relative;
+    margin-right: 0.25rem;
+    margin-left: 0;
+}
+
+:host-context(*[dir="rtl"]) .example-label__required {
+    margin-left: 0.25rem;
+    margin-right: 0;
+}
+
+:host .example-label__optional {
+    margin-left: 0.25rem;
+    margin-right: 0;
+}
+
+:host-context(*[dir="rtl"]) .example-label__optional {
+    margin-right: 0.25rem;
+    margin-left: 0;
+}
+
+/* Hidden label */
+:host .example-label--hidden {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+/* Input groups */
+:host fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+:host .example-field__legend {
+    padding-inline-start: 0; /* Hack to legend to sit in the right place */
+    padding-inline-end: 0; /* Hack to legend to sit in the right place */
+    margin-bottom: var(--example-spacing-xs, 0.5rem);
+    color: var(--example-color);
+    font-size: var(--example-font-size);
+    font-weight: var(--example-font-weight);
+}
+
+:host > .example-field__wrapper label {
+    color: var(--example-label-color, inherit);
+}
+
+/* Invalid state */
+:host(.example-field--invalid) {
+    padding-left: var(--example-field-spacing-left);
+    border-left: var(--example-border-left) solid var(--example-border-color);
+}
+
+:host(.example-field--invalid) .example-field__input-container::slotted(.example-form-element--invalid),
+:host(.example-field--invalid) .example-field__input-container::slotted(*) .example-form-element--invalid,
+.example-field__input-container::slotted(.example-form-element--invalid) .example-form-element {
+    --example-border-color: var(--example-global-danger-color, var(--example-default-red));
+}
+
+/* Stacked inputs */
+:host(.example-field--stack) .example-field__input-container > *:not([data-wrapper-children]),
+:host(.example-field--stack) ::slotted(*:not([data-wrapper-children])),
+:host(.example-field--stack) ::slotted([data-wrapper-children]) > * {
+    padding-bottom: var(--example-spacing-md);
+}
+
+:host(.example-field--stack) .example-field__input-container > *:last-child:not([data-wrapper-children]),
+:host(.example-field--stack) ::slotted(*:last-child:not([data-wrapper-children])),
+:host(.example-field--stack) ::slotted([data-wrapper-children]) > *:last-child {
+    padding-bottom: 0;
+}
+
+/* Inline and joined inputs */
+:host .example-field__input-container::slotted(*) .example-label {
+    color: var(--example-multiple-elements-label-color);
+}
+
+:host(.example-field--inline) .example-field__input-container,
+:host(.example-field--inline) .example-field__input-container::slotted([data-wrapper-children]) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+:host(.example-field--inline) .example-input:not([class*="example-input--width"]),
+:host(.example-field--inline) .example-select:not([class*="example-select--width"]),
+:host(.example-field--inline) ::slotted(.example-input:not([class*="example-input--width"])),
+:host(.example-field--inline) ::slotted(.example-select:not([class*="example-select--width"])) {
+    display: block;
+    flex-grow: 1;
+}
+
+:host(.example-field--inline) .example-field__input-container::slotted(*:not([data-wrapper-children])),
+:host(.example-field--inline) .example-field__input-container::slotted([data-wrapper-children]) > * {
+    padding-right: var(--example-spacing-sm);
+}
+
+:host(.example-field--inline) .example-field__input-container::slotted(*:not([data-wrapper-children])):last-child,
+:host(.example-field--inline) .example-field__input-container::slotted([data-wrapper-children]) > *:last-child,
+:host(.example-field--join) .example-field__input-container::slotted(*:not([data-wrapper-children])),
+:host(.example-field--join) .example-field__input-container::slotted([data-wrapper-children]) > * {
+    padding-right: 0;
+}
+
+/* Joined fields */
+:host(.example-field--join) .example-input:not(:last-child) .example-input__native-input,
+:host(.example-field--join) ::slotted(.example-input):not(:last-child) .example-input__native-input,
+:host(.example-field--join) .example-select:not(:last-child) .example-select__select,
+:host(.example-field--join) ::slotted(.example-select):not(:last-child) .example-select__select {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+
+:host(.example-field--join) .example-input:not(:first-child) .example-input__native-input,
+:host(.example-field--join) ::slotted(.example-input):not(:first-child) .example-input__native-input,
+:host(.example-field--join) .example-select:not(:first-child) .example-select__select,
+:host(.example-field--join) ::slotted(.example-select):not(:first-child) .example-select__select {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

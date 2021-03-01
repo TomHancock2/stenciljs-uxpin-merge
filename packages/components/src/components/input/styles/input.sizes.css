@@ -1,0 +1,87 @@
+:host(.example-input.example-input--width-2) .example-input__wrapper,
+:host(.example-input.example-input--width-4) .example-input__wrapper,
+:host(.example-input.example-input--width-6) .example-input__wrapper,
+:host(.example-input.example-input--width-8) .example-input__wrapper,
+:host(.example-input.example-input--width-10) .example-input__wrapper,
+:host(.example-input.example-input--width-12) .example-input__wrapper,
+:host(.example-input.example-input--width-16) .example-input__wrapper,
+:host(.example-input.example-input--width-25-perc) .example-input__wrapper,
+:host(.example-input.example-input--width-50-perc) .example-input__wrapper,
+:host(.example-input.example-input--width-75-perc) .example-input__wrapper {
+    display: inline-flex;
+    flex-grow: 0;
+}
+
+:host(.example-input--width-2) .example-input__native-input {
+    width: calc((2 * var(--example-padding-x)) + 2rem);
+    max-width: 100%;
+    flex-grow: 0;
+}
+
+:host(.example-input--width-4) .example-input__native-input {
+    width: calc((2 * var(--example-padding-x)) + 4rem);
+    max-width: 100%;
+    flex-grow: 0;
+}
+
+:host(.example-input--width-6) .example-input__native-input {
+    width: calc((2 * var(--example-padding-x)) + 6rem);
+    max-width: 100%;
+    flex-grow: 0;
+}
+
+:host(.example-input--width-8) .example-input__native-input {
+    width: calc((2 * var(--example-padding-x)) + 8rem);
+    max-width: 100%;
+    flex-grow: 0;
+}
+
+:host(.example-input--width-10) .example-input__native-input {
+    width: calc((2 * var(--example-padding-x)) + 10rem);
+    max-width: 100%;
+    flex-grow: 0;
+}
+
+:host(.example-input--width-12) .example-input__native-input {
+    width: calc((2 * var(--example-padding-x)) + 12rem);
+    max-width: 100%;
+    flex-grow: 0;
+}
+
+:host(.example-input--width-16) .example-input__native-input {
+    width: calc((2 * var(--example-padding-x)) + 16rem);
+    max-width: 100%;
+    flex-grow: 0;
+}
+
+:host(.example-input--width-25-perc) .example-input__wrapper {
+    width: 25%;
+    flex-grow: 0;
+}
+
+:host(.example-input--width-50-perc) .example-input__wrapper {
+    width: 50%;
+    flex-grow: 0;
+}
+
+:host(.example-input--width-75-perc) .example-input__wrapper {
+    width: 75%;
+    flex-grow: 0;
+}
+
+/* Widths when used in an Inline field */
+:host-context(.example-field--inline) .example-input__wrapper {
+    width: 100%;
+}
+:host-context(.example-field--inline).example-input--width-25-perc {
+    width: 25%;
+}
+:host-context(.example-field--inline).example-input--width-50-perc {
+    width: 50%;
+}
+:host-context(.example-field--inline).example-input--width-75-perc {
+    width: 75%;
+}
+:host-context(.example-field--inline).example-input--width-16 {
+    width: 75%;
+}

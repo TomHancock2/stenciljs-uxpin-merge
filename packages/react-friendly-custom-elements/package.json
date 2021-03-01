@@ -1,0 +1,14 @@
+{
+  "name": "react-friendly-custom-elements",
+  "private": true,
+  "version": "0.0.1",
+  "description": "React starter components for Example Design System",
+  "license": "MIT",
+  "main": "./dist/react-friendly-custom-elements.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "react": "^17.0.1"
+  }
+}
