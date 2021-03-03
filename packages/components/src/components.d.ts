@@ -5,11 +5,33 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { ColAlignSelf, ColOffset, ColSpan } from "./components/col/col.types";
 import { FormData, FormFieldStatus, HeadingLevel, InputEventStatus, OnOff, SelectWidth, TextFieldType, ValidationMessage } from "./utils/interfaces";
 import { NativeFormElement } from "./components/field/field.types";
 import { FormMethod } from "./components/form/form.types";
 import { InputMode, InputVRTState, InputWidth, NativeInputElement } from "./components/input/input.types";
+import { RowGutter, RowHorizontalAlign, RowVerticalAlign } from "./components/row/row.types";
 export namespace Components {
+    interface ExampleCol {
+        /**
+          * Individual alignment of column
+         */
+        "alignSelf"?: ColAlignSelf;
+        /**
+          * Number of columns to offset.
+         */
+        "offset"?: ColOffset | ColOffset[];
+        /**
+          * Number of columns to span.
+         */
+        "span"?: ColSpan | ColSpan[];
+    }
+    interface ExampleContainer {
+        /**
+          * Container stretches to fill the width of the browser window if true.
+         */
+        "fluid"?: boolean;
+    }
     interface ExampleField {
         /**
           * Setting to true will disable the validation on the field
@@ -338,8 +360,34 @@ export namespace Components {
          */
         "required": boolean;
     }
+    interface ExampleRow {
+        /**
+          * The amount of space between columns. If a single value is provided, this will be applied to all viewport sizes. If multiple values are provided, the first will apply to the small viewport upwards, the second to the medium viewport upwards, the third (if set) to the large viewport upwards, and the fourth (if set) to the extra large viewport.
+         */
+        "gutter"?: RowGutter[] | RowGutter;
+        /**
+          * Horizontal alignment, follows flexbox justify-content
+         */
+        "horizontalAlign"?: RowHorizontalAlign;
+        /**
+          * Vertical alignment, follows flexbox align-items
+         */
+        "verticalAlign"?: RowVerticalAlign;
+    }
 }
 declare global {
+    interface HTMLExampleColElement extends Components.ExampleCol, HTMLStencilElement {
+    }
+    var HTMLExampleColElement: {
+        prototype: HTMLExampleColElement;
+        new (): HTMLExampleColElement;
+    };
+    interface HTMLExampleContainerElement extends Components.ExampleContainer, HTMLStencilElement {
+    }
+    var HTMLExampleContainerElement: {
+        prototype: HTMLExampleContainerElement;
+        new (): HTMLExampleContainerElement;
+    };
     interface HTMLExampleFieldElement extends Components.ExampleField, HTMLStencilElement {
     }
     var HTMLExampleFieldElement: {
@@ -364,14 +412,43 @@ declare global {
         prototype: HTMLExampleLabelElement;
         new (): HTMLExampleLabelElement;
     };
+    interface HTMLExampleRowElement extends Components.ExampleRow, HTMLStencilElement {
+    }
+    var HTMLExampleRowElement: {
+        prototype: HTMLExampleRowElement;
+        new (): HTMLExampleRowElement;
+    };
     interface HTMLElementTagNameMap {
+        "example-col": HTMLExampleColElement;
+        "example-container": HTMLExampleContainerElement;
         "example-field": HTMLExampleFieldElement;
         "example-form": HTMLExampleFormElement;
         "example-input": HTMLExampleInputElement;
         "example-label": HTMLExampleLabelElement;
+        "example-row": HTMLExampleRowElement;
     }
 }
 declare namespace LocalJSX {
+    interface ExampleCol {
+        /**
+          * Individual alignment of column
+         */
+        "alignSelf"?: ColAlignSelf;
+        /**
+          * Number of columns to offset.
+         */
+        "offset"?: ColOffset | ColOffset[];
+        /**
+          * Number of columns to span.
+         */
+        "span"?: ColSpan | ColSpan[];
+    }
+    interface ExampleContainer {
+        /**
+          * Container stretches to fill the width of the browser window if true.
+         */
+        "fluid"?: boolean;
+    }
     interface ExampleField {
         /**
           * Setting to true will disable the validation on the field
@@ -720,21 +797,41 @@ declare namespace LocalJSX {
          */
         "required"?: boolean;
     }
+    interface ExampleRow {
+        /**
+          * The amount of space between columns. If a single value is provided, this will be applied to all viewport sizes. If multiple values are provided, the first will apply to the small viewport upwards, the second to the medium viewport upwards, the third (if set) to the large viewport upwards, and the fourth (if set) to the extra large viewport.
+         */
+        "gutter"?: RowGutter[] | RowGutter;
+        /**
+          * Horizontal alignment, follows flexbox justify-content
+         */
+        "horizontalAlign"?: RowHorizontalAlign;
+        /**
+          * Vertical alignment, follows flexbox align-items
+         */
+        "verticalAlign"?: RowVerticalAlign;
+    }
     interface IntrinsicElements {
+        "example-col": ExampleCol;
+        "example-container": ExampleContainer;
         "example-field": ExampleField;
         "example-form": ExampleForm;
         "example-input": ExampleInput;
         "example-label": ExampleLabel;
+        "example-row": ExampleRow;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "example-col": LocalJSX.ExampleCol & JSXBase.HTMLAttributes<HTMLExampleColElement>;
+            "example-container": LocalJSX.ExampleContainer & JSXBase.HTMLAttributes<HTMLExampleContainerElement>;
             "example-field": LocalJSX.ExampleField & JSXBase.HTMLAttributes<HTMLExampleFieldElement>;
             "example-form": LocalJSX.ExampleForm & JSXBase.HTMLAttributes<HTMLExampleFormElement>;
             "example-input": LocalJSX.ExampleInput & JSXBase.HTMLAttributes<HTMLExampleInputElement>;
             "example-label": LocalJSX.ExampleLabel & JSXBase.HTMLAttributes<HTMLExampleLabelElement>;
+            "example-row": LocalJSX.ExampleRow & JSXBase.HTMLAttributes<HTMLExampleRowElement>;
         }
     }
 }

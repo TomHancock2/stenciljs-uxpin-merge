@@ -9,6 +9,14 @@ module.exports = {
                     'src/components/ExampleInput/ExampleInput.js',
                 ],
             },
+            {
+                name: 'Layout',
+                include: [
+                    'src/components/ExampleContainer/ExampleContainer.js',
+                    'src/components/ExampleRow/ExampleRow.js',
+                    'src/components/ExampleCol/ExampleCol.js',
+                ],
+            },
         ],
         wrapper: 'src/wrappers/ThemeWrapper.js',
     },

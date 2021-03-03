@@ -1,0 +1,159 @@
+:host {
+    --example-gutter: 0;
+    --example-neg-gutter: 0;
+}
+:host(.example-row__gutter--xs) {
+    --example-gutter: var(--example-row-gutter-xs, var(--example-horizontal-rhythm, var(--example-default-spacing)));
+    --example-neg-gutter: calc(var(--example-gutter) * -1);
+}
+:host(.example-row__gutter--sm) {
+    --example-gutter: var(--example-row-gutter-sm, var(--example-horizontal-rhythm--2x, var(--example-default-spacing--2x)));
+    --example-neg-gutter: calc(var(--example-gutter) * -1);
+}
+:host(.example-row__gutter--md) {
+    --example-gutter: var(--example-row-gutter-md, var(--example-horizontal-rhythm--3x, var(--example-default-spacing--3x)));
+    --example-neg-gutter: calc(var(--example-gutter) * -1);
+}
+:host(.example-row__gutter--lg) {
+    --example-gutter: var(--example-row-gutter-lg, var(--example-horizontal-rhythm--4x, var(--example-default-spacing--4x)));
+    --example-neg-gutter: calc(var(--example-gutter) * -1);
+}
+:host(.example-row__gutter--xl) {
+    --example-gutter: var(--example-row-gutter-xl, var(--example-horizontal-rhythm--5x, var(--example-default-spacing--5x)));
+    --example-neg-gutter: calc(var(--example-gutter) * -1);
+}
+
+@media only screen and (max-width: 575px) {
+    :host(.example-row__gutter-xs--none) {
+        --example-gutter: 0;
+        --example-neg-gutter: 0;
+    }
+    :host(.example-row__gutter-xs--xs) {
+        --example-gutter: var(--example-row-gutter-xs, var(--example-horizontal-rhythm, var(--example-default-spacing)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-xs--sm) {
+        --example-gutter: var(--example-row-gutter-sm, var(--example-horizontal-rhythm--2x, var(--example-default-spacing--2x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-xs--md) {
+        --example-gutter: var(--example-row-gutter-md, var(--example-horizontal-rhythm--3x, var(--example-default-spacing--3x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-xs--lg) {
+        --example-gutter: var(--example-row-gutter-lg, var(--example-horizontal-rhythm--4x, var(--example-default-spacing--4x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-xs--xl) {
+        --example-gutter: var(--example-row-gutter-xl, var(--example-default-spacing--5x));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    :host(.example-row__gutter-sm--none) {
+        --example-gutter: 0;
+        --example-neg-gutter: 0;
+    }
+    :host(.example-row__gutter-sm--xs) {
+        --example-gutter: var(--example-row-gutter-xs, var(--example-horizontal-rhythm, var(--example-default-spacing)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-sm--sm) {
+        --example-gutter: var(--example-row-gutter-sm, var(--example-horizontal-rhythm--2x, var(--example-default-spacing--2x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-sm--md) {
+        --example-gutter: var(--example-row-gutter-md, var(--example-horizontal-rhythm--3x, var(--example-default-spacing--3x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-sm--lg) {
+        --example-gutter: var(--example-row-gutter-lg, var(--example-horizontal-rhythm--4x, var(--example-default-spacing--4x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-sm--xl) {
+        --example-gutter: var(--example-row-gutter-xl, var(--example-horizontal-rhythm--5x, var(--example-default-spacing--5x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    :host(.example-row__gutter-md--none) {
+        --example-gutter: 0;
+        --example-neg-gutter: 0;
+    }
+    :host(.example-row__gutter-md--xs) {
+        --example-gutter: var(--example-row-gutter-xs, var(--example-horizontal-rhythm, var(--example-default-spacing)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-md--sm) {
+        --example-gutter: var(--example-row-gutter-sm, var(--example-horizontal-rhythm--2x, var(--example-default-spacing--2x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-md--md) {
+        --example-gutter: var(--example-row-gutter-md, var(--example-horizontal-rhythm--3x, var(--example-default-spacing--3x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-md--lg) {
+        --example-gutter: var(--example-row-gutter-lg, var(--example-horizontal-rhythm--4x, var(--example-default-spacing--4x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-md--xl) {
+        --example-gutter: var(--example-row-gutter-xl, var(--example-horizontal-rhythm--5x, var(--example-default-spacing--5x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    :host(.example-row__gutter-lg--none) {
+        --example-gutter: 0;
+        --example-neg-gutter: 0;
+    }
+    :host(.example-row__gutter-lg--xs) {
+        --example-gutter: var(--example-row-gutter-xs, var(--example-horizontal-rhythm, var(--example-default-spacing)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-lg--sm) {
+        --example-gutter: var(--example-row-gutter-sm, var(--example-horizontal-rhythm--2x, var(--example-default-spacing--2x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-lg--md) {
+        --example-gutter: var(--example-row-gutter-md, var(--example-horizontal-rhythm--3x, var(--example-default-spacing--3x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-lg--lg) {
+        --example-gutter: var(--example-row-gutter-lg, var(--example-horizontal-rhythm--4x, var(--example-default-spacing--4x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-xl--xl) {
+        --example-gutter: var(--example-row-gutter-xl, var(--example-horizontal-rhythm--5x, var(--example-default-spacing--5x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    :host(.example-row__gutter-xl--none) {
+        --example-gutter: 0;
+        --example-neg-gutter: 0;
+    }
+    :host(.example-row__gutter-xl--xs) {
+        --example-gutter: var(--example-row-gutter-xs, var(--example-horizontal-rhythm, var(--example-default-spacing)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-xl--sm) {
+        --example-gutter: var(--example-row-gutter-sm, var(--example-horizontal-rhythm--2x, var(--example-default-spacing--2x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-xl--md) {
+        --example-gutter: var(--example-row-gutter-md, var(--example-horizontal-rhythm--3x, var(--example-default-spacing--3x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-xl--lg) {
+        --example-gutter: var(--example-row-gutter-lg, var(--example-horizontal-rhythm--4x, var(--example-default-spacing--4x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+    :host(.example-row__gutter-xl--xl) {
+        --example-gutter: var(--example-row-gutter-xl, var(--example-horizontal-rhythm--5x, var(--example-default-spacing--5x)));
+        --example-neg-gutter: calc(var(--example-gutter) * -1);
+    }
+}

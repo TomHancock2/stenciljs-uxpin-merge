@@ -62,3 +62,47 @@ export const stringReplacer = (
     });
     return replacedStr;
 };
+
+export const getResponsiveValuesFromProp = (
+    propValue: any
+): any[] => {
+    let responsiveVals = [];
+    if (typeof propValue === 'string' && propValue.indexOf('[') !== -1) {
+        responsiveVals = JSON.parse(propValue);
+    } else if (typeof propValue === 'string') {
+        responsiveVals.push(propValue);
+    } else {
+        responsiveVals = propValue;
+    }
+    return responsiveVals;
+};
+
+export const getResponsiveLayoutClasses = (
+    responsiveValues: any[],
+    cssClassEnum: any,
+    type: string,
+): any | void => {
+    if (responsiveValues && responsiveValues.length > 0) {
+        if (responsiveValues.length === 1) {
+            const singleVal =
+                responsiveValues.length === 1 ? responsiveValues[0] : null;
+            return {
+                [`${cssClassEnum[type]}--${singleVal}`]: !!singleVal,
+            };
+        } else {
+            const valXs =
+                responsiveValues.length > 1 ? responsiveValues[0] : null;
+            const valSm = responsiveValues[1] ? responsiveValues[1] : null;
+            const valMd = responsiveValues[2] ? responsiveValues[2] : null;
+            const valLg = responsiveValues[3] ? responsiveValues[3] : null;
+            const valXl = responsiveValues[4] ? responsiveValues[4] : null;
+            return {
+                [`${cssClassEnum[type]}-xs--${valXs}`]: !!valXs,
+                [`${cssClassEnum[type]}-sm--${valSm}`]: !!valSm,
+                [`${cssClassEnum[type]}-md--${valMd}`]: !!valMd,
+                [`${cssClassEnum[type]}-lg--${valLg}`]: !!valLg,
+                [`${cssClassEnum[type]}-xl--${valXl}`]: !!valXl,
+            };
+        }
+    }
+};

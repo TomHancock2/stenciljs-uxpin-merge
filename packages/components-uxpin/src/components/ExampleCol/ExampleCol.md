@@ -1,0 +1,5 @@
+# ExampleCol
+
+```javascript
+<ExampleCol></ExampleCol>
+```

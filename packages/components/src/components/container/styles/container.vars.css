@@ -1,0 +1,31 @@
+:host {
+    --example-padding-x: var(--example-container-padding-x, var(--example-horizontal-rhythm--4x, var(--example-default-spacing--4x)));
+}
+
+:host(.example-container--fluid) {
+    --example-max-width: 100%;
+}
+
+@media only screen and (min-width: 576px) {
+    :host {
+        --example-max-width: var(--example-container-max-width-sm, 520px);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    :host {
+        --example-max-width: var(--example-container-max-width-md, 740px);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    :host {
+        --example-max-width: var(--example-container-max-width-lg, 960px);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    :host {
+        --example-max-width: var(--example-container-max-width-xl, 1160px);
+    }
+}

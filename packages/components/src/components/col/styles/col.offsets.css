@@ -1,0 +1,247 @@
+:host(.example-col__offset--11) {
+    margin-left: var(--example-col-11);
+}
+
+:host(.example-col__offset--10) {
+    margin-left: var(--example-col-10);
+}
+
+:host(.example-col__offset--9) {
+    margin-left: var(--example-col-9);
+}
+
+:host(.example-col__offset--8) {
+    margin-left: var(--example-col-8);
+}
+
+:host(.example-col__offset--7) {
+    margin-left: var(--example-col-7);
+}
+
+:host(.example-col__offset--6) {
+    margin-left: var(--example-col-6);
+}
+
+:host(.example-col__offset--5) {
+    margin-left: var(--example-col-5);
+}
+
+:host(.example-col__offset--4) {
+    margin-left: var(--example-col-4);
+}
+
+:host(.example-col__offset--3) {
+    margin-left: var(--example-col-3);
+}
+
+:host(.example-col__offset--2) {
+    margin-left: var(--example-col-2);
+}
+
+:host(.example-col__offset--1) {
+    margin-left: var(--example-col-1);
+}
+
+:host(.example-col__offset--0) {
+    margin-left: 0;
+}
+
+@media only screen and (min-width: 576px) {
+    :host(.example-col__offset-sm--11) {
+        margin-left: var(--example-col-11);
+    }
+
+    :host(.example-col__offset-sm--10) {
+        margin-left: var(--example-col-10);
+    }
+
+    :host(.example-col__offset-sm--9) {
+        margin-left: var(--example-col-9);
+    }
+
+    :host(.example-col__offset-sm--8) {
+        margin-left: var(--example-col-8);
+    }
+
+    :host(.example-col__offset-sm--7) {
+        margin-left: var(--example-col-7);
+    }
+
+    :host(.example-col__offset-sm--6) {
+        margin-left: var(--example-col-6);
+    }
+
+    :host(.example-col__offset-sm--5) {
+        margin-left: var(--example-col-5);
+    }
+
+    :host(.example-col__offset-sm--4) {
+        margin-left: var(--example-col-4);
+    }
+
+    :host(.example-col__offset-sm--3) {
+        margin-left: var(--example-col-3);
+    }
+
+    :host(.example-col__offset-sm--2) {
+        margin-left: var(--example-col-2);
+    }
+
+    :host(.example-col__offset-sm--1) {
+        margin-left: var(--example-col-1);
+    }
+
+    :host(.example-col__offset-sm--0) {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    :host(.example-col__offset-md--11) {
+        margin-left: var(--example-col-11);
+    }
+
+    :host(.example-col__offset-md--10) {
+        margin-left: var(--example-col-10);
+    }
+
+    :host(.example-col__offset-md--9) {
+        margin-left: var(--example-col-9);
+    }
+
+    :host(.example-col__offset-md--8) {
+        margin-left: var(--example-col-8);
+    }
+
+    :host(.example-col__offset-md--7) {
+        margin-left: var(--example-col-7);
+    }
+
+    :host(.example-col__offset-md--6) {
+        margin-left: var(--example-col-6);
+    }
+
+    :host(.example-col__offset-md--5) {
+        margin-left: var(--example-col-5);
+    }
+
+    :host(.example-col__offset-md--4) {
+        margin-left: var(--example-col-4);
+    }
+
+    :host(.example-col__offset-md--3) {
+        margin-left: var(--example-col-3);
+    }
+
+    :host(.example-col__offset-md--2) {
+        margin-left: var(--example-col-2);
+    }
+
+    :host(.example-col__offset-md--1) {
+        margin-left: var(--example-col-1);
+    }
+
+    :host(.example-col__offset-md--0) {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    :host(.example-col__offset-lg--11) {
+        margin-left: var(--example-col-11);
+    }
+
+    :host(.example-col__offset-lg--10) {
+        margin-left: var(--example-col-10);
+    }
+
+    :host(.example-col__offset-lg--9) {
+        margin-left: var(--example-col-9);
+    }
+
+    :host(.example-col__offset-lg--8) {
+        margin-left: var(--example-col-8);
+    }
+
+    :host(.example-col__offset-lg--7) {
+        margin-left: var(--example-col-7);
+    }
+
+    :host(.example-col__offset-lg--6) {
+        margin-left: var(--example-col-6);
+    }
+
+    :host(.example-col__offset-lg--5) {
+        margin-left: var(--example-col-5);
+    }
+
+    :host(.example-col__offset-lg--4) {
+        margin-left: var(--example-col-4);
+    }
+
+    :host(.example-col__offset-lg--3) {
+        margin-left: var(--example-col-3);
+    }
+
+    :host(.example-col__offset-lg--2) {
+        margin-left: var(--example-col-2);
+    }
+
+    :host(.example-col__offset-lg--1) {
+        margin-left: var(--example-col-1);
+    }
+
+    :host(.example-col__offset-lg--0) {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    :host(.example-col__offset-xl--11) {
+        margin-left: var(--example-col-11);
+    }
+
+    :host(.example-col__offset-xl--10) {
+        margin-left: var(--example-col-10);
+    }
+
+    :host(.example-col__offset-xl--9) {
+        margin-left: var(--example-col-9);
+    }
+
+    :host(.example-col__offset-xl--8) {
+        margin-left: var(--example-col-8);
+    }
+
+    :host(.example-col__offset-xl--7) {
+        margin-left: var(--example-col-7);
+    }
+
+    :host(.example-col__offset-xl--6) {
+        margin-left: var(--example-col-6);
+    }
+
+    :host(.example-col__offset-xl--5) {
+        margin-left: var(--example-col-5);
+    }
+
+    :host(.example-col__offset-xl--4) {
+        margin-left: var(--example-col-4);
+    }
+
+    :host(.example-col__offset-xl--3) {
+        margin-left: var(--example-col-3);
+    }
+
+    :host(.example-col__offset-xl--2) {
+        margin-left: var(--example-col-2);
+    }
+
+    :host(.example-col__offset-xl--1) {
+        margin-left: var(--example-col-1);
+    }
+
+    :host(.example-col__offset-xl--0) {
+        margin-left: 0;
+    }
+}

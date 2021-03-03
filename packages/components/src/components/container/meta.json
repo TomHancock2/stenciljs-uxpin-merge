@@ -1,0 +1,12 @@
+{
+    "name": "container",
+    "tagName": "example-container",
+    "lastUpdated": "v1.16.1",
+    "componentGroup": "Layout",
+    "status": {
+        "oneui": "unavailable",
+        "webComponent": "available",
+        "react": "available",
+        "angular": "unavailable"
+    }
+}

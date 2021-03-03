@@ -1,0 +1,332 @@
+:host(.example-col__span--auto) {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+:host(.example-col__span--12) {
+    flex: 0 0 var(--example-col-12);
+    max-width: var(--example-col-12);
+}
+
+:host(.example-col__span--11) {
+    flex: 0 0 var(--example-col-11);
+    max-width: var(--example-col-11);
+}
+
+:host(.example-col__span--10) {
+    flex: 0 0 var(--example-col-10);
+    max-width: var(--example-col-10);
+}
+
+:host(.example-col__span--9) {
+    flex: 0 0 var(--example-col-9);
+    max-width: var(--example-col-9);
+}
+
+:host(.example-col__span--8) {
+    flex: 0 0 var(--example-col-8);
+    max-width: var(--example-col-8);
+}
+
+:host(.example-col__span--7) {
+    flex: 0 0 var(--example-col-7);
+    max-width: var(--example-col-7);
+}
+
+:host(.example-col__span--6) {
+    flex: 0 0 var(--example-col-6);
+    max-width: var(--example-col-6);
+}
+
+:host(.example-col__span--5) {
+    flex: 0 0 var(--example-col-5);
+    max-width: var(--example-col-5);
+}
+
+:host(.example-col__span--4) {
+    flex: 0 0 var(--example-col-4);
+    max-width: var(--example-col-4);
+}
+
+:host(.example-col__span--3) {
+    flex: 0 0 var(--example-col-3);
+    max-width: var(--example-col-3);
+}
+
+:host(.example-col__span--2) {
+    flex: 0 0 var(--example-col-2);
+    max-width: var(--example-col-2);
+}
+
+:host(.example-col__span--1) {
+    flex: 0 0 var(--example-col-1);
+    max-width: var(--example-col-1);
+}
+
+@media only screen and (min-width: 576px) {
+    :host(.example-col__span-sm--auto) {
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+
+    :host(.example-col__span-sm--12) {
+        flex: 0 0 var(--example-col-12);
+        max-width: var(--example-col-12);
+    }
+
+    :host(.example-col__span-sm--11) {
+        flex: 0 0 var(--example-col-11);
+        max-width: var(--example-col-11);
+    }
+
+    :host(.example-col__span-sm--10) {
+        flex: 0 0 var(--example-col-10);
+        max-width: var(--example-col-10);
+    }
+
+    :host(.example-col__span-sm--9) {
+        flex: 0 0 var(--example-col-9);
+        max-width: var(--example-col-9);
+    }
+
+    :host(.example-col__span-sm--8) {
+        flex: 0 0 var(--example-col-8);
+        max-width: var(--example-col-8);
+    }
+
+    :host(.example-col__span-sm--7) {
+        flex: 0 0 var(--example-col-7);
+        max-width: var(--example-col-7);
+    }
+
+    :host(.example-col__span-sm--6) {
+        flex: 0 0 var(--example-col-6);
+        max-width: var(--example-col-6);
+    }
+
+    :host(.example-col__span-sm--5) {
+        flex: 0 0 var(--example-col-5);
+        max-width: var(--example-col-5);
+    }
+
+    :host(.example-col__span-sm--4) {
+        flex: 0 0 var(--example-col-4);
+        max-width: var(--example-col-4);
+    }
+
+    :host(.example-col__span-sm--3) {
+        flex: 0 0 var(--example-col-3);
+        max-width: var(--example-col-3);
+    }
+
+    :host(.example-col__span-sm--2) {
+        flex: 0 0 var(--example-col-2);
+        max-width: var(--example-col-2);
+    }
+
+    :host(.example-col__span-sm--1) {
+        flex: 0 0 var(--example-col-1);
+        max-width: var(--example-col-1);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    :host(.example-col__span-md--auto) {
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+
+    :host(.example-col__span-md--12) {
+        flex: 0 0 var(--example-col-12);
+        max-width: var(--example-col-12);
+    }
+
+    :host(.example-col__span-md--11) {
+        flex: 0 0 var(--example-col-11);
+        max-width: var(--example-col-11);
+    }
+
+    :host(.example-col__span-md--10) {
+        flex: 0 0 var(--example-col-10);
+        max-width: var(--example-col-10);
+    }
+
+    :host(.example-col__span-md--9) {
+        flex: 0 0 var(--example-col-9);
+        max-width: var(--example-col-9);
+    }
+
+    :host(.example-col__span-md--8) {
+        flex: 0 0 var(--example-col-8);
+        max-width: var(--example-col-8);
+    }
+
+    :host(.example-col__span-md--7) {
+        flex: 0 0 var(--example-col-7);
+        max-width: var(--example-col-7);
+    }
+
+    :host(.example-col__span-md--6) {
+        flex: 0 0 var(--example-col-6);
+        max-width: var(--example-col-6);
+    }
+
+    :host(.example-col__span-md--5) {
+        flex: 0 0 var(--example-col-5);
+        max-width: var(--example-col-5);
+    }
+
+    :host(.example-col__span-md--4) {
+        flex: 0 0 var(--example-col-4);
+        max-width: var(--example-col-4);
+    }
+
+    :host(.example-col__span-md--3) {
+        flex: 0 0 var(--example-col-3);
+        max-width: var(--example-col-3);
+    }
+
+    :host(.example-col__span-md--2) {
+        flex: 0 0 var(--example-col-2);
+        max-width: var(--example-col-2);
+    }
+
+    :host(.example-col__span-md--1) {
+        flex: 0 0 var(--example-col-1);
+        max-width: var(--example-col-1);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    :host(.example-col__span-lg--auto) {
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+
+    :host(.example-col__span-lg--12) {
+        flex: 0 0 var(--example-col-12);
+        max-width: var(--example-col-12);
+    }
+
+    :host(.example-col__span-lg--11) {
+        flex: 0 0 var(--example-col-11);
+        max-width: var(--example-col-11);
+    }
+
+    :host(.example-col__span-lg--10) {
+        flex: 0 0 var(--example-col-10);
+        max-width: var(--example-col-10);
+    }
+
+    :host(.example-col__span-lg--9) {
+        flex: 0 0 var(--example-col-9);
+        max-width: var(--example-col-9);
+    }
+
+    :host(.example-col__span-lg--8) {
+        flex: 0 0 var(--example-col-8);
+        max-width: var(--example-col-8);
+    }
+
+    :host(.example-col__span-lg--7) {
+        flex: 0 0 var(--example-col-7);
+        max-width: var(--example-col-7);
+    }
+
+    :host(.example-col__span-lg--6) {
+        flex: 0 0 var(--example-col-6);
+        max-width: var(--example-col-6);
+    }
+
+    :host(.example-col__span-lg--5) {
+        flex: 0 0 var(--example-col-5);
+        max-width: var(--example-col-5);
+    }
+
+    :host(.example-col__span-lg--4) {
+        flex: 0 0 var(--example-col-4);
+        max-width: var(--example-col-4);
+    }
+
+    :host(.example-col__span-lg--3) {
+        flex: 0 0 var(--example-col-3);
+        max-width: var(--example-col-3);
+    }
+
+    :host(.example-col__span-lg--2) {
+        flex: 0 0 var(--example-col-2);
+        max-width: var(--example-col-2);
+    }
+
+    :host(.example-col__span-lg--1) {
+        flex: 0 0 var(--example-col-1);
+        max-width: var(--example-col-1);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    :host(.example-col__span-xl--auto) {
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+
+    :host(.example-col__span-xl--12) {
+        flex: 0 0 var(--example-col-12);
+        max-width: var(--example-col-12);
+    }
+
+    :host(.example-col__span-xl--11) {
+        flex: 0 0 var(--example-col-11);
+        max-width: var(--example-col-11);
+    }
+
+    :host(.example-col__span-xl--10) {
+        flex: 0 0 var(--example-col-10);
+        max-width: var(--example-col-10);
+    }
+
+    :host(.example-col__span-xl--9) {
+        flex: 0 0 var(--example-col-9);
+        max-width: var(--example-col-9);
+    }
+
+    :host(.example-col__span-xl--8) {
+        flex: 0 0 var(--example-col-8);
+        max-width: var(--example-col-8);
+    }
+
+    :host(.example-col__span-xl--7) {
+        flex: 0 0 var(--example-col-7);
+        max-width: var(--example-col-7);
+    }
+
+    :host(.example-col__span-xl--6) {
+        flex: 0 0 var(--example-col-6);
+        max-width: var(--example-col-6);
+    }
+
+    :host(.example-col__span-xl--5) {
+        flex: 0 0 var(--example-col-5);
+        max-width: var(--example-col-5);
+    }
+
+    :host(.example-col__span-xl--4) {
+        flex: 0 0 var(--example-col-4);
+        max-width: var(--example-col-4);
+    }
+
+    :host(.example-col__span-xl--3) {
+        flex: 0 0 var(--example-col-3);
+        max-width: var(--example-col-3);
+    }
+
+    :host(.example-col__span-xl--2) {
+        flex: 0 0 var(--example-col-2);
+        max-width: var(--example-col-2);
+    }
+
+    :host(.example-col__span-xl--1) {
+        flex: 0 0 var(--example-col-1);
+        max-width: var(--example-col-1);
+    }
+}

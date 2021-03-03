@@ -1,0 +1,32 @@
+@import "./row.gutter.vars.css";
+@import "./row.alignment.css";
+
+/** Row
+* --------------------------------------------------
+* @prop --gutter: Spacing between the columns within the Row
+* @prop --neg-gutter: Negative value to reset spacing in nested Rows
+**/
+
+:host,
+:host * {
+    box-sizing: border-box;
+}
+
+:host {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: var(--example-neg-gutter);
+    margin-right: var(--example-neg-gutter);
+    margin-bottom: calc(var(--example-neg-gutter) * 2);
+}
+
+/* Row controls the padding of example-col components */
+:host ::slotted(.example-col) {
+    padding-left: var(--example-gutter);
+    padding-right: var(--example-gutter);
+    padding-bottom: calc(var(--example-gutter) * 2);
+}
+
+:host(:last-child) ::slotted(.example-col) {
+    margin-bottom: 0;
+}

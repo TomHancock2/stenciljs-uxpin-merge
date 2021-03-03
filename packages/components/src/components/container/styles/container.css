@@ -1,0 +1,28 @@
+@import "./container.vars.css";
+
+/** Container
+*---------------------------------------------------
+* @prop --example-padding-x: Horizontal padding of the Container
+* @prop --example-max-width: Max-width of the Container
+**/
+
+:host,
+:host *,
+:host *::after,
+:host *::before {
+    box-sizing: border-box;
+}
+
+:host {
+    padding-left: var(--example-padding-x);
+    padding-right: var(--example-padding-x);
+    max-width: var(--example-max-width);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 575px) {
+    :host {
+        --example-padding-x: 0;
+    }
+}

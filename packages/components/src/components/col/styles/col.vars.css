@@ -1,0 +1,14 @@
+:host {
+    --example-col-1: 8.3333%;
+    --example-col-2: 16.6667%;
+    --example-col-3: 25%;
+    --example-col-4: 33.3333%;
+    --example-col-5: 41.6667%;
+    --example-col-6: 50%;
+    --example-col-7: 58.3333%;
+    --example-col-8: 66.6667%;
+    --example-col-9: 75%;
+    --example-col-10: 83.3333%;
+    --example-col-11: 91.6667%;
+    --example-col-12: 100%;
+}

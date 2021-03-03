@@ -1,0 +1,33 @@
+/* Horizontal alignment */
+:host(.example-row__h-align--around) {
+    justify-content: space-around;
+}
+:host(.example-row__h-align--between) {
+    justify-content: space-between;
+}
+:host(.example-row__h-align--center) {
+    justify-content: center;
+}
+:host(.example-row__h-align--evenly) {
+    justify-content: space-evenly;
+}
+:host(.example-row__v-align--left) {
+    align-items: flex-start;
+}
+:host(.example-row__h-align--right) {
+    justify-content: flex-end;
+}
+
+/* Vertical alignment */
+:host(.example-row__v-align--bottom) {
+    align-items: flex-end;
+}
+:host(.example-row__v-align--middle) {
+    align-items: center;
+}
+:host(.example-row__v-align--stretch) {
+    align-items: stretch;
+}
+:host(.example-row__v-align--top) {
+    align-items: flex-start;
+}

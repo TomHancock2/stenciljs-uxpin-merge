@@ -1,0 +1,31 @@
+@import "./col.vars.css";
+@import "./col.sizes.css";
+@import "./col.offsets.css";
+
+/** Column
+*---------------------------------------------------
+**/
+
+:host {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+:host([align-self="start"]) {
+    align-self: flex-start;
+}
+
+:host([align-self="center"]) {
+    align-self: center;
+}
+
+:host([align-self="end"]) {
+    align-self: flex-end;
+}
+
+:host([align-self="stretch"]) {
+    align-self: stretch;
+}
