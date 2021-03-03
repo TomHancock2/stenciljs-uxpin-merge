@@ -1,5 +1,10 @@
 /// <reference types="react" />
-import { ExampleInputProps } from './ExampleInput.types';
+import { Components } from 'components';
+interface ExampleInputProps extends Omit<Components.ExampleInput, "getNativeElement" | "validate" | "reset"> {
+    uxpId?: string;
+    uxpinRef?: string;
+    children?: any;
+}
 /**
  * @uxpinwrappers
  * SkipContainerWrapper
