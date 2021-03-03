@@ -6,7 +6,7 @@ import ExampleInput from '../src/components/ExampleInput/ExampleInput';
 import ExampleContainer from '../src/components/ExampleContainer/ExampleContainer';
 import ExampleRow from '../src/components/ExampleRow/ExampleRow';
 import ExampleCol from '../src/components/ExampleCol/ExampleCol';
-import Wrapper from '../src/wrappers/ThemeWrapper.js';
+import Wrapper from '../src/wrappers/ThemeWrapper.tsx';
 export {
   ExampleForm,
   ExampleField,

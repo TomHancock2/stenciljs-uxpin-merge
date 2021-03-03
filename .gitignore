@@ -16,6 +16,7 @@ $RECYCLE.BIN/
 .terraform/
 .scannerwork/
 coverage/
+.uxpin-merge
 
 # Extensions
 *~
@@ -27,6 +28,7 @@ package-json.lock
 log.txt
 *.sublime-project
 *.sublime-workspace
+*.js
 
 # Files
 .DS_Store
@@ -35,3 +37,7 @@ package-lock.json
 UserInterfaceState.xcuserstate
 .env
 .npmrc
+
+# Allowed
+!uxpin.config.js
+!webpack.uxpin.config.js

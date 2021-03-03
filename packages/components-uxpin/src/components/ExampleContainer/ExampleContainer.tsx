@@ -1,11 +1,13 @@
 import * as React from 'react';
-import * as PropTypes from 'prop-types';
+//import * as PropTypes from 'prop-types';
 import { useCustomElement } from 'react-friendly-custom-elements';
+import { ExampleContainerProps } from './ExampleContainer.types';
+
 /**
  * @uxpinwrappers
  * SkipContainerWrapper
  */
-const ExampleContainer = props => {
+const ExampleContainer = (props: ExampleContainerProps) => {
     const { children, uxpinRef, ...otherProps } = props;
     const [customElementProps, ref] = useCustomElement(
         otherProps,
@@ -23,11 +25,6 @@ const ExampleContainer = props => {
             {showChildren ? children: null}
         </example-container>
     );
-};
-
-ExampleContainer.propTypes = {
-    fluid: PropTypes.bool,
-    children: PropTypes.node,
 };
 
 export { ExampleContainer as default };

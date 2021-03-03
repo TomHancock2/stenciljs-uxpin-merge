@@ -19,9 +19,9 @@ module.exports = {
                 ],
             },
             {
-                test: /\.ts?$/,
-                use: 'ts-loader',
                 exclude: /node_modules/,
+                test: /\.(ts|tsx)$/,
+                use: 'awesome-typescript-loader',
             },
             {
                 use: {
@@ -34,7 +34,7 @@ module.exports = {
     },
     resolve: {
         modules: [__dirname, 'node_modules'],
-        extensions: ['*', '.js', '.jsx', '.json', 'ts', 'tsx'],
+        extensions: ['*', '.js', '.jsx', '.json', '.ts', '.tsx'],
     },
     output: {
         filename: 'bundle.js',

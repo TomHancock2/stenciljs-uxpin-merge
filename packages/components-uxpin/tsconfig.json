@@ -16,6 +16,13 @@
     "noUnusedLocals": true,
     "noEmitHelpers": true,
     "importHelpers": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2017",
+      "esnext.asynciterable",
+      "scripthost"
+    ]
   },
   "include": ["./src/**/*"]
 }
