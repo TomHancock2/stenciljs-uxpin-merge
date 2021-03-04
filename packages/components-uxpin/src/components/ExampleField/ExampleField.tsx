@@ -1,5 +1,4 @@
 import * as React from 'react';
-//import * as PropTypes from 'prop-types';
 import { useCustomElement } from 'react-friendly-custom-elements';
 import { ExampleFieldProps } from './ExampleField.types';
 
@@ -21,24 +20,4 @@ const ExampleField = (props: ExampleFieldProps) => {
     );
 };
 
-// ExampleField.propTypes = {
-//     error: PropTypes.string,
-//     hiddenLabel: PropTypes.bool,
-//     hint: PropTypes.string,
-//     inline: PropTypes.bool,
-//     label: PropTypes.string,
-//     join: PropTypes.bool,
-//     optional: PropTypes.bool,
-//     optionalText: PropTypes.string,
-//     patternMismatch: PropTypes.string,
-//     rangeOverflow: PropTypes.string,
-//     rangeUnderflow: PropTypes.string,
-//     stepMismatch: PropTypes.string,
-//     tooLong: PropTypes.string,
-//     tooShort: PropTypes.string,
-//     typeMismatch: PropTypes.string,
-//     valueMissing: PropTypes.string,
-//     children: PropTypes.node,
-// };
-
-export { ExampleField as default };
+export default ExampleField;

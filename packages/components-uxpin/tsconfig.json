@@ -24,5 +24,8 @@
       "scripthost"
     ]
   },
+  "awesomeTypescriptLoaderOptions": {
+    "transpileOnly": true,
+  },
   "include": ["./src/**/*"]
 }

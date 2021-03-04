@@ -24,7 +24,41 @@
           },
           "name": "ExampleForm",
           "presets": [],
-          "properties": []
+          "properties": [
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "uxpId",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "uxpinRef",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "children",
+              "type": {
+                "name": "any",
+                "structure": {}
+              }
+            }
+          ],
+          "wrappers": [
+            {
+              "name": "SkipContainerWrapper",
+              "type": "builtIn"
+            }
+          ]
         },
         {
           "documentation": {
@@ -48,7 +82,41 @@
           },
           "name": "ExampleField",
           "presets": [],
-          "properties": []
+          "properties": [
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "uxpId",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "uxpinRef",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "children",
+              "type": {
+                "name": "any",
+                "structure": {}
+              }
+            }
+          ],
+          "wrappers": [
+            {
+              "name": "SkipContainerWrapper",
+              "type": "builtIn"
+            }
+          ]
         },
         {
           "documentation": {
@@ -72,7 +140,41 @@
           },
           "name": "ExampleInput",
           "presets": [],
-          "properties": []
+          "properties": [
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "uxpId",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "uxpinRef",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "children",
+              "type": {
+                "name": "any",
+                "structure": {}
+              }
+            }
+          ],
+          "wrappers": [
+            {
+              "name": "SkipContainerWrapper",
+              "type": "builtIn"
+            }
+          ]
         }
       ],
       "name": "Forms"
@@ -101,7 +203,41 @@
           },
           "name": "ExampleContainer",
           "presets": [],
-          "properties": []
+          "properties": [
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "uxpId",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "uxpinRef",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "children",
+              "type": {
+                "name": "any",
+                "structure": {}
+              }
+            }
+          ],
+          "wrappers": [
+            {
+              "name": "SkipContainerWrapper",
+              "type": "builtIn"
+            }
+          ]
         },
         {
           "documentation": {
@@ -125,7 +261,41 @@
           },
           "name": "ExampleRow",
           "presets": [],
-          "properties": []
+          "properties": [
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "uxpId",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "uxpinRef",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "children",
+              "type": {
+                "name": "any",
+                "structure": {}
+              }
+            }
+          ],
+          "wrappers": [
+            {
+              "name": "NonResizableWrapper",
+              "type": "builtIn"
+            }
+          ]
         },
         {
           "documentation": {
@@ -149,7 +319,41 @@
           },
           "name": "ExampleCol",
           "presets": [],
-          "properties": []
+          "properties": [
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "uxpId",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "uxpinRef",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "children",
+              "type": {
+                "name": "any",
+                "structure": {}
+              }
+            }
+          ],
+          "wrappers": [
+            {
+              "name": "NonResizableWrapper",
+              "type": "builtIn"
+            }
+          ]
         }
       ],
       "name": "Layout"
@@ -158,7 +362,7 @@
   "name": "Example Design System",
   "vcs": {
     "branchName": "master",
-    "commitHash": "06bb321d8e126bbc9a68ea24ba8c15ecd6e5360c",
+    "commitHash": "3ec52c25ff64e3a7ab219469e13c8a82869d13ff",
     "paths": {
       "configPath": "/Users/tom.hancock/Development/tomhancock2/stenciljs-uxpin-merge/packages/components-uxpin/uxpin.config.js",
       "projectRoot": "/Users/tom.hancock/Development/tomhancock2/stenciljs-uxpin-merge/packages/components-uxpin"

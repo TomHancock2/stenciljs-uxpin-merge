@@ -1,5 +1,4 @@
 import * as React from 'react';
-//import * as PropTypes from 'prop-types';
 import { useCustomElement } from 'react-friendly-custom-elements';
 import { ExampleContainerProps } from './ExampleContainer.types';
 
@@ -27,4 +26,4 @@ const ExampleContainer = (props: ExampleContainerProps) => {
     );
 };
 
-export { ExampleContainer as default };
+export default ExampleContainer;
