@@ -1,4 +1,3 @@
-import { ExampleContainer } from 'components/dist/custom-elements';
 import * as React from 'react';
 import { useCustomElement } from 'react-friendly-custom-elements';
 import { ExampleColProps } from './ExampleCol.types';
