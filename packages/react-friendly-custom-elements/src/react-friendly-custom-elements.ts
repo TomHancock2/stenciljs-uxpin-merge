@@ -29,7 +29,6 @@ export const useCustomElement = (props, customMapping = {}, reactRef?): any => {
     React.useLayoutEffect(() => {
         const { current } = ref;
         let fns;
-
         if (current) {
             fns = Object.keys(props)
                 .filter(key => props[key] instanceof Function)
@@ -38,9 +37,9 @@ export const useCustomElement = (props, customMapping = {}, reactRef?): any => {
                     fn: (customEvent): CustomEvent =>
                         props[key](customEvent.detail, customEvent),
                 }));
-
             fns.forEach(({ key, fn }) => current.addEventListener(key, fn));
         }
+    
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         return (): any => {
             if (current) {

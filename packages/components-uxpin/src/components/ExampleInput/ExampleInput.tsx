@@ -7,7 +7,7 @@ import { ExampleInputProps } from './ExampleInput.types';
  * SkipContainerWrapper
 */
 const ExampleInput = (props: ExampleInputProps) => {
-    const { children, uxpinRef, onInput, ...otherProps } = props;
+    const { children, uxpinRef, ...otherProps } = props;
     const [customElementProps, ref] = useCustomElement(
         otherProps,
         {
@@ -20,9 +20,11 @@ const ExampleInput = (props: ExampleInputProps) => {
         },
         uxpinRef
     );
+    document.addEventListener('exampleInput', () => {
+        console.log('heard exampleInput');
+    });
     return (
         <example-input 
-            onExampleInput={onInput} 
             {...customElementProps} 
             ref={ref}
         >

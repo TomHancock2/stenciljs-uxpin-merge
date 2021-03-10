@@ -1526,7 +1526,7 @@
   "name": "Example Design System",
   "vcs": {
     "branchName": "master",
-    "commitHash": "798b0ddcfcfc410068a35e1dde4d4f3661236208",
+    "commitHash": "7f9a4435ca08c1d9b1cfaf41dbe697a0654da3d7",
     "paths": {
       "configPath": "/Users/tom.hancock/Development/tomhancock2/stenciljs-uxpin-merge/packages/components-uxpin/uxpin.config.js",
       "projectRoot": "/Users/tom.hancock/Development/tomhancock2/stenciljs-uxpin-merge/packages/components-uxpin"
