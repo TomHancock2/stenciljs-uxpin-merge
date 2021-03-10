@@ -7,7 +7,7 @@ import { ExampleFormProps } from './ExampleForm.types';
  * SkipContainerWrapper
  */
 const ExampleForm = (props: ExampleFormProps) => {
-    const { children, uxpinRef, ...otherProps } = props;
+    const { children, uxpinRef, header, ...otherProps } = props;
     const [customElementProps, ref] = useCustomElement(
         otherProps,
         {
@@ -18,6 +18,9 @@ const ExampleForm = (props: ExampleFormProps) => {
     );
     return (
         <example-form {...customElementProps} ref={ref}>
+            <div slot="header">
+                {header}
+            </div>
             <div>{children}</div>
         </example-form>
     );

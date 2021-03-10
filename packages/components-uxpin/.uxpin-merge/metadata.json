@@ -20,26 +20,54 @@
               "lang": "typescript",
               "path": "src/components/ExampleForm/ExampleForm.tsx"
             },
-            "presets": []
+            "presets": [
+              {
+                "path": "src/components/ExampleForm/presets/0-default.jsx"
+              }
+            ]
           },
           "name": "ExampleForm",
-          "presets": [],
+          "presets": [
+            {
+              "elements": {
+                "ExampleForm": {
+                  "name": "ExampleForm",
+                  "props": {
+                    "children": [
+                      {
+                        "uxpinPresetElementId": "ExampleForm.ExampleField"
+                      }
+                    ]
+                  }
+                },
+                "ExampleForm.ExampleField": {
+                  "name": "ExampleField",
+                  "props": {
+                    "children": [
+                      {
+                        "uxpinPresetElementId": "ExampleForm.ExampleField.ExampleInput"
+                      }
+                    ],
+                    "hint": "Hint Text",
+                    "label": "New field"
+                  }
+                },
+                "ExampleForm.ExampleField.ExampleInput": {
+                  "name": "ExampleInput",
+                  "props": {}
+                }
+              },
+              "name": "default",
+              "rootId": "ExampleForm"
+            }
+          ],
           "properties": [
             {
               "description": "",
               "isRequired": false,
-              "name": "uxpId",
+              "name": "header",
               "type": {
-                "name": "string",
-                "structure": {}
-              }
-            },
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "uxpinRef",
-              "type": {
-                "name": "string",
+                "name": "node",
                 "structure": {}
               }
             },
@@ -48,7 +76,7 @@
               "isRequired": false,
               "name": "children",
               "type": {
-                "name": "any",
+                "name": "node",
                 "structure": {}
               }
             },
@@ -339,7 +367,11 @@
               "lang": "typescript",
               "path": "src/components/ExampleField/ExampleField.tsx"
             },
-            "presets": []
+            "presets": [
+              {
+                "path": "src/components/ExampleField/presets/0-default.jsx"
+              }
+            ]
           },
           "name": "ExampleField",
           "presets": [],
@@ -347,27 +379,9 @@
             {
               "description": "",
               "isRequired": false,
-              "name": "uxpId",
-              "type": {
-                "name": "string",
-                "structure": {}
-              }
-            },
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "uxpinRef",
-              "type": {
-                "name": "string",
-                "structure": {}
-              }
-            },
-            {
-              "description": "",
-              "isRequired": false,
               "name": "children",
               "type": {
-                "name": "any",
+                "name": "node",
                 "structure": {}
               }
             },
@@ -550,35 +564,34 @@
               "lang": "typescript",
               "path": "src/components/ExampleInput/ExampleInput.tsx"
             },
-            "presets": []
+            "presets": [
+              {
+                "path": "src/components/ExampleInput/presets/0-default.jsx"
+              }
+            ]
           },
           "name": "ExampleInput",
-          "presets": [],
+          "presets": [
+            {
+              "elements": {
+                "ExampleInput": {
+                  "name": "ExampleInput",
+                  "props": {
+                    "placeholder": "Example Design System"
+                  }
+                }
+              },
+              "name": "default",
+              "rootId": "ExampleInput"
+            }
+          ],
           "properties": [
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "uxpId",
-              "type": {
-                "name": "string",
-                "structure": {}
-              }
-            },
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "uxpinRef",
-              "type": {
-                "name": "string",
-                "structure": {}
-              }
-            },
             {
               "description": "",
               "isRequired": false,
               "name": "children",
               "type": {
-                "name": "any",
+                "name": "node",
                 "structure": {}
               }
             },
@@ -910,17 +923,6 @@
               }
             },
             {
-              "description": "**For testing purposes** Interaction state of the input",
-              "isRequired": false,
-              "name": "vrtState",
-              "type": {
-                "name": "literal",
-                "structure": {
-                  "value": "focus"
-                }
-              }
-            },
-            {
               "description": "When set to `true` add ons will render with a different style. Will be ignored if `prepend` or `append` slots are not being used.",
               "isRequired": false,
               "name": "watermark",
@@ -1092,35 +1094,64 @@
               "lang": "typescript",
               "path": "src/components/ExampleContainer/ExampleContainer.tsx"
             },
-            "presets": []
+            "presets": [
+              {
+                "path": "src/components/ExampleContainer/presets/0-default.jsx"
+              }
+            ]
           },
           "name": "ExampleContainer",
-          "presets": [],
+          "presets": [
+            {
+              "elements": {
+                "ExampleContainer": {
+                  "name": "ExampleContainer",
+                  "props": {
+                    "children": [
+                      {
+                        "uxpinPresetElementId": "ExampleContainer.ExampleRow"
+                      }
+                    ]
+                  }
+                },
+                "ExampleContainer.ExampleCol.1": {
+                  "name": "ExampleCol",
+                  "props": {
+                    "children": "Column 1"
+                  }
+                },
+                "ExampleContainer.ExampleCol.2": {
+                  "name": "ExampleCol",
+                  "props": {
+                    "children": "Column 2"
+                  }
+                },
+                "ExampleContainer.ExampleRow": {
+                  "name": "ExampleRow",
+                  "props": {
+                    "children": [
+                      {
+                        "uxpinPresetElementId": "ExampleContainer.ExampleCol.1"
+                      },
+                      {
+                        "uxpinPresetElementId": "ExampleContainer.ExampleCol.2"
+                      }
+                    ],
+                    "gutter": "lg"
+                  }
+                }
+              },
+              "name": "default",
+              "rootId": "ExampleContainer"
+            }
+          ],
           "properties": [
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "uxpId",
-              "type": {
-                "name": "string",
-                "structure": {}
-              }
-            },
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "uxpinRef",
-              "type": {
-                "name": "string",
-                "structure": {}
-              }
-            },
             {
               "description": "",
               "isRequired": false,
               "name": "children",
               "type": {
-                "name": "any",
+                "name": "node",
                 "structure": {}
               }
             },
@@ -1159,35 +1190,32 @@
               "lang": "typescript",
               "path": "src/components/ExampleRow/ExampleRow.tsx"
             },
-            "presets": []
+            "presets": [
+              {
+                "path": "src/components/ExampleRow/presets/0-default.jsx"
+              }
+            ]
           },
           "name": "ExampleRow",
-          "presets": [],
+          "presets": [
+            {
+              "elements": {
+                "ExampleRow": {
+                  "name": "ExampleRow",
+                  "props": {}
+                }
+              },
+              "name": "default",
+              "rootId": "ExampleRow"
+            }
+          ],
           "properties": [
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "uxpId",
-              "type": {
-                "name": "string",
-                "structure": {}
-              }
-            },
-            {
-              "description": "",
-              "isRequired": false,
-              "name": "uxpinRef",
-              "type": {
-                "name": "string",
-                "structure": {}
-              }
-            },
             {
               "description": "",
               "isRequired": false,
               "name": "children",
               "type": {
-                "name": "any",
+                "name": "node",
                 "structure": {}
               }
             },
@@ -1353,10 +1381,27 @@
               "lang": "typescript",
               "path": "src/components/ExampleCol/ExampleCol.tsx"
             },
-            "presets": []
+            "presets": [
+              {
+                "path": "src/components/ExampleCol/presets/0-default.jsx"
+              }
+            ]
           },
           "name": "ExampleCol",
-          "presets": [],
+          "presets": [
+            {
+              "elements": {
+                "ExampleCol": {
+                  "name": "ExampleCol",
+                  "props": {
+                    "span": "auto"
+                  }
+                }
+              },
+              "name": "default",
+              "rootId": "ExampleCol"
+            }
+          ],
           "properties": [
             {
               "description": "",
@@ -1381,7 +1426,7 @@
               "isRequired": false,
               "name": "children",
               "type": {
-                "name": "any",
+                "name": "node",
                 "structure": {}
               }
             }
@@ -1400,7 +1445,7 @@
   "name": "Example Design System",
   "vcs": {
     "branchName": "master",
-    "commitHash": "c5e41c7efc0b30c91d15f537d83fd69f766994de",
+    "commitHash": "48ec69e94ecced498211a1ac1f1c911e634243d0",
     "paths": {
       "configPath": "/Users/tom.hancock/Development/tomhancock2/stenciljs-uxpin-merge/packages/components-uxpin/uxpin.config.js",
       "projectRoot": "/Users/tom.hancock/Development/tomhancock2/stenciljs-uxpin-merge/packages/components-uxpin"

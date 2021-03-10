@@ -1,3 +1,4 @@
+import { FormSlot } from 'components/dist/types/components/form/form.types';
 import * as React from 'react';
 import { useCustomElement } from 'react-friendly-custom-elements';
 import { ExampleFieldProps } from './ExampleField.types';

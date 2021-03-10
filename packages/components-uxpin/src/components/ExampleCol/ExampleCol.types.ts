@@ -4,5 +4,5 @@ import { Column } from 'components/dist/types/components/col/col';
 export interface ExampleColProps extends Column {
   uxpId?: string;
   uxpinRef?: string;
-  children?: any;
+  children?: React.ReactNode;
 }

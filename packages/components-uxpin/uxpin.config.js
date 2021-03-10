@@ -18,7 +18,7 @@ module.exports = {
                 ],
             },
         ],
-        wrapper: 'src/wrappers/ThemeWrapper.tsx',
+        wrapper: 'src/wrappers/ThemeWrapper.jsx',
     },
     name: 'Example Design System',
 };
