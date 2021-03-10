@@ -4,21 +4,21 @@ module.exports = {
             {
                 name: 'Forms',
                 include: [
-                    'src/components/ExampleForm/ExampleForm.js',
-                    'src/components/ExampleField/ExampleField.js',
-                    'src/components/ExampleInput/ExampleInput.js',
+                    'src/components/ExampleForm/ExampleForm.tsx',
+                    'src/components/ExampleField/ExampleField.tsx',
+                    'src/components/ExampleInput/ExampleInput.tsx',
                 ],
             },
             {
                 name: 'Layout',
                 include: [
-                    'src/components/ExampleContainer/ExampleContainer.js',
-                    'src/components/ExampleRow/ExampleRow.js',
-                    'src/components/ExampleCol/ExampleCol.js',
+                    'src/components/ExampleContainer/ExampleContainer.tsx',
+                    'src/components/ExampleRow/ExampleRow.tsx',
+                    'src/components/ExampleCol/ExampleCol.tsx',
                 ],
             },
         ],
-        wrapper: 'src/wrappers/ThemeWrapper.js',
+        wrapper: 'src/wrappers/ThemeWrapper.jsx',
     },
     name: 'Example Design System',
 };

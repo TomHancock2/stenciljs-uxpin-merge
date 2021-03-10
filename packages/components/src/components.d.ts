@@ -9,7 +9,7 @@ import { ColAlignSelf, ColOffset, ColSpan } from "./components/col/col.types";
 import { FormData, FormFieldStatus, HeadingLevel, InputEventStatus, OnOff, SelectWidth, TextFieldType, ValidationMessage } from "./utils/interfaces";
 import { NativeFormElement } from "./components/field/field.types";
 import { FormMethod } from "./components/form/form.types";
-import { InputMode, InputVRTState, InputWidth, NativeInputElement } from "./components/input/input.types";
+import { InputMode, InputWidth, NativeInputElement } from "./components/input/input.types";
 import { RowGutter, RowHorizontalAlign, RowVerticalAlign } from "./components/row/row.types";
 export namespace Components {
     interface ExampleCol {
@@ -317,10 +317,6 @@ export namespace Components {
           * The value of the input.
          */
         "value"?: string | null;
-        /**
-          * **For testing purposes** Interaction state of the input
-         */
-        "vrtState"?: InputVRTState;
         /**
           * When set to `true` add ons will render with a different style. Will be ignored if `prepend` or `append` slots are not being used.
          */
@@ -754,10 +750,6 @@ declare namespace LocalJSX {
           * The value of the input.
          */
         "value"?: string | null;
-        /**
-          * **For testing purposes** Interaction state of the input
-         */
-        "vrtState"?: InputVRTState;
         /**
           * When set to `true` add ons will render with a different style. Will be ignored if `prepend` or `append` slots are not being used.
          */

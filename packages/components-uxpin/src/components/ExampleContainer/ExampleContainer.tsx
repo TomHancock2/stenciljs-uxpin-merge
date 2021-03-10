@@ -1,33 +1,23 @@
 import * as React from 'react';
-import * as PropTypes from 'prop-types';
 import { useCustomElement } from 'react-friendly-custom-elements';
+import { ExampleContainerProps } from './ExampleContainer.types';
+
 /**
  * @uxpinwrappers
  * SkipContainerWrapper
  */
-const ExampleContainer = props => {
+const ExampleContainer = (props: ExampleContainerProps) => {
     const { children, uxpinRef, ...otherProps } = props;
     const [customElementProps, ref] = useCustomElement(
         otherProps,
         {},
         uxpinRef
     );
-    const [showChildren, setShowChildren] = React.useState(false);
-    React.useEffect(() => {
-        if (!showChildren) {
-            setShowChildren(true);
-        }
-    });
     return (
         <example-container {...customElementProps} ref={ref}>
-            {showChildren ? children: null}
+            <div>{children}</div>
         </example-container>
     );
 };
 
-ExampleContainer.propTypes = {
-    fluid: PropTypes.bool,
-    children: PropTypes.node,
-};
-
-export { ExampleContainer as default };
+export default ExampleContainer;
