@@ -2097,10 +2097,10 @@
   resolved "https://registry.yarnpkg.com/@types/tough-cookie/-/tough-cookie-2.3.6.tgz#c880579e087d7a0db13777ff8af689f4ffc7b0d5"
   integrity sha512-wHNBMnkoEBiRAd3s8KTKwIuO9biFtTf0LehITzBhSco+HQI0xkXZbLOD55SW3Aqw3oUkHstkm5SPv58yaAdFPQ==
 
-"@uxpin/merge-cli@^2.7.3":
-  version "2.7.3"
-  resolved "https://registry.yarnpkg.com/@uxpin/merge-cli/-/merge-cli-2.7.3.tgz#58a93e0450448c8375090fcdb69d0bff1a0d2248"
-  integrity sha512-1cO1ECLezc0cvaWZgRJQVAsUU6c/R+fS+Z0LUXgKtZezwRqEYe3zK1VWMb37nnOaPsVbquaSnmbCYO5pqe3+VQ==
+"@uxpin/merge-cli@^2.7.4-dev.1":
+  version "2.7.4-dev.1"
+  resolved "https://registry.yarnpkg.com/@uxpin/merge-cli/-/merge-cli-2.7.4-dev.1.tgz#3717ce6e323518182470ef842dc44f0db06c44c8"
+  integrity sha512-bdtcIeKzp3Vhbm5zKX+0gp5Lkrl0zblUljEa4nJSH+UZeJM8ghImn1VAMUdew7nJdauxxnZY0xEIFAu89KoQow==
   dependencies:
     "@babel/core" "^7.2.2"
     "@babel/plugin-proposal-class-properties" "^7.2.3"

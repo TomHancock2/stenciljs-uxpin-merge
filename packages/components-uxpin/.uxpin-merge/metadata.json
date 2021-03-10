@@ -51,6 +51,267 @@
                 "name": "any",
                 "structure": {}
               }
+            },
+            {
+              "description": "A space- or comma-delimited list of character encodings that the server accepts",
+              "isRequired": false,
+              "name": "acceptCharset",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "The URI of a program that processes the form information",
+              "isRequired": false,
+              "name": "action",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "If set to true, the form will submit to the server, if false, that default behavior will be prevented and an ajax call can be made",
+              "isRequired": false,
+              "name": "allowRedirect",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Indicates whether input elements can by default have their values automatically completed by the browser",
+              "isRequired": false,
+              "name": "autocomplete",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "off"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "on"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "description": "Sets whether to use clear the form when successfully submitted or not. Setting to true will leave the form fields populated.",
+              "isRequired": false,
+              "name": "disabledClearOnSubmit",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Sets whether to use default HTML 5 validation or not. Setting to true will allow consumers to use their own validation engine",
+              "isRequired": false,
+              "name": "disabledValidation",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "When the value of the method attribute is post, enctype is the MIME type of content that is used to submit the form to the server",
+              "isRequired": false,
+              "name": "enctype",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Level of error summary heading for semantics",
+              "isRequired": false,
+              "name": "errorSummaryHeadingLevel",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "h2"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "h3"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "h4"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "h5"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "h6"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "description": "Text to be displayed in the title of the error summary",
+              "isRequired": false,
+              "name": "errorSummaryHeadingText",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Sets whether to show the error summary on submit. Will be ignored if validate is false",
+              "isRequired": false,
+              "name": "hiddenErrorSummary",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "The HTTP method that the browser uses to submit the form",
+              "isRequired": false,
+              "name": "method",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "post"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "get"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "description": "Name of the form",
+              "isRequired": false,
+              "name": "name",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "When set to true, labels show an 'optional' label and not a required label",
+              "isRequired": false,
+              "name": "optionalLabels",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Error message to be displayed when the characters does fulfil the pattern provided by the `pattern` prop. {{fieldName}} is replaced by the text from the field's `label`",
+              "isRequired": false,
+              "name": "patternMismatch",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Error message to be displayed when the number value exceed the `max` property. {{fieldName}} and {{attrValue}} are replaced by the text from the field's `label` and the value of `max` respectively.",
+              "isRequired": false,
+              "name": "rangeOverflow",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Error message to be displayed when the number value is lower than the `min` property. {{fieldName}} and {{attrValue}} are replaced by the text from the field's `label` and the value of `min` respectively.",
+              "isRequired": false,
+              "name": "rangeUnderflow",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Error message to be displayed when the number of characters exceed the `maxlength` property. {{fieldName}} and {{attrValue}} are replaced by the text from the field's `label` and the value of `maxlength` respectively.",
+              "isRequired": false,
+              "name": "stepMismatch",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "A name or keyword indicating where to display the response that is received after submitting the form",
+              "isRequired": false,
+              "name": "target",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Error message to be displayed when the number of characters exceed the `maxlength` property. {{fieldName}} and {{attrValue}} are replaced by the text from the field's `label` and the value of `maxlength` respectively.",
+              "isRequired": false,
+              "name": "tooLong",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Error message to be displayed when there are not enough characters to equal or exceed the `minlength` property. {{fieldName}} and {{attrValue}} are replaced by the text from the field's `label` and the value of `minlength` respectively.",
+              "isRequired": false,
+              "name": "tooShort",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Error message to be displayed when the field value is not the correct syntax. {{fieldName}} is replaced by the text from the field's `label`",
+              "isRequired": false,
+              "name": "typeMismatch",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Error message to be displayed when the input is required and no value has been entered. {{fieldName}} is replaced by the text from the field's `label`",
+              "isRequired": false,
+              "name": "valueMissing",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
             }
           ],
           "wrappers": [
@@ -107,6 +368,159 @@
               "name": "children",
               "type": {
                 "name": "any",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Setting to true will disable the validation on the field",
+              "isRequired": false,
+              "name": "disabledValidation",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Error text for when using as a controlled component",
+              "isRequired": false,
+              "name": "error",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Visually hides the label text, but still available to screenreaders",
+              "isRequired": false,
+              "name": "hiddenLabel",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Text to be displayed as supporting field description",
+              "isRequired": false,
+              "name": "hint",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Displays multiple children in line rather than stacked.",
+              "isRequired": false,
+              "name": "inline",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Renders a fieldset if set to true",
+              "isRequired": false,
+              "name": "inputGroup",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Removes margin from inline child components. Only activates when inline prop is also set.",
+              "isRequired": false,
+              "name": "join",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Text to be displayed in the label. This can form part of error messages to make sure it makes sense in this context",
+              "isRequired": true,
+              "name": "label",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Text that is added to a label to mark a field as optional",
+              "isRequired": false,
+              "name": "optionalText",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Error message to be displayed when the characters does fulfil the pattern provided by the `pattern` prop. Defaults to HTML5 default message.",
+              "isRequired": false,
+              "name": "patternMismatch",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Error message to be displayed when the number value exceed the `max` property. Defaults to HTML5 default message.",
+              "isRequired": false,
+              "name": "rangeOverflow",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Error message to be displayed when the number value is lower than the `min` property. Defaults to HTML5 default message.",
+              "isRequired": false,
+              "name": "rangeUnderflow",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Error message to be displayed when the number of characters exceed the `maxlength` property. Defaults to HTML5 default message.",
+              "isRequired": false,
+              "name": "stepMismatch",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Error message to be displayed when the number of characters exceed the `maxlength` property. Defaults to HTML5 default message.",
+              "isRequired": false,
+              "name": "tooLong",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Error message to be displayed when there are not enough characters to equal or exceed the `minlength` property. Defaults to HTML5 default message.",
+              "isRequired": false,
+              "name": "tooShort",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Error message to be displayed when the field value is not the correct syntax. Defaults to HTML5 default message.",
+              "isRequired": false,
+              "name": "typeMismatch",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Error message to be displayed when the input is required and no value has been entered. Defaults to HTML5 default message.",
+              "isRequired": false,
+              "name": "valueMissing",
+              "type": {
+                "name": "string",
                 "structure": {}
               }
             }
@@ -166,6 +580,485 @@
               "type": {
                 "name": "any",
                 "structure": {}
+              }
+            },
+            {
+              "description": "Indicates whether the value of the control can be automatically completed by the browser.",
+              "isRequired": false,
+              "name": "autocomplete",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Whether auto correction should be enabled when the user is entering/editing the text value.",
+              "isRequired": false,
+              "name": "autocorrect",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "off"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "on"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "description": "If `true`, then user can clear the value of the input. Will be ignored if `rows` prop is in use.",
+              "isRequired": false,
+              "name": "clearable",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Visually hides the label (if set), label will still be read out by screenreaders",
+              "isRequired": false,
+              "name": "hiddenLabel",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "A hint to the browser for which keyboard to display. Possible values: `\"none\"`, `\"text\"`, `\"tel\"`, `\"url\"`, `\"email\"`, `\"numeric\"`, `\"decimal\"`, and `\"search\"`.",
+              "isRequired": false,
+              "name": "inputmode",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "none"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "text"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "tel"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "url"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "email"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "numeric"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "decimal"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "search"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "description": "Sets a role of \"combobox\" on the HTML input. Only needed for autocomplete controls.",
+              "isRequired": false,
+              "name": "isAutocomplete",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Sets the aria-expanded attribute on the HTML input. Only needed for autocomplete controls, and should be dynamically set to true when search results are shown",
+              "isRequired": false,
+              "name": "isExpanded",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "The maximum value, which must not be less than its minimum (min attribute) value.",
+              "isRequired": false,
+              "name": "max",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "If the value of the type attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, this attribute specifies the maximum number of characters that the user can enter.",
+              "isRequired": false,
+              "name": "maxlength",
+              "type": {
+                "name": "number",
+                "structure": {}
+              }
+            },
+            {
+              "description": "The minimum value, which must not be greater than its maximum (max attribute) value.",
+              "isRequired": false,
+              "name": "min",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "If the value of the type attribute is `text`, `email`, `search`, `password`, `tel`, or `url`, this attribute specifies the minimum number of characters that the user can enter.",
+              "isRequired": false,
+              "name": "minlength",
+              "type": {
+                "name": "number",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Label text to be used when there are multiple inputs in one field",
+              "isRequired": false,
+              "name": "multiInputLabel",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "The name of the control, which is submitted with the form data.",
+              "isRequired": false,
+              "name": "name",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "If `true`, the (optional) text is shown in the label. Will be ignored if `required` is set to `true`",
+              "isRequired": false,
+              "name": "optional",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "A regular expression that the value is checked against. The pattern must match the entire value, not just some subset. Use the `hint` attribute on the field component to give the user extra information about the pattern. This attribute applies when the value of the type attribute is `\"text\"`, `\"search\"`, `\"tel\"`, `\"url\"`, `\"email\"`, or `\"password\"`, otherwise it is ignored.",
+              "isRequired": false,
+              "name": "pattern",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Instructional text that shows before the input has a value.",
+              "isRequired": false,
+              "name": "placeholder",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "If `true`, the user cannot modify the value.",
+              "isRequired": false,
+              "name": "readonly",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "If `true`, the user must fill in a value before submitting a form.",
+              "isRequired": false,
+              "name": "required",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Number of rows in the textarea (when set the component renders a textarea element)",
+              "isRequired": false,
+              "name": "rows",
+              "type": {
+                "name": "number",
+                "structure": {}
+              }
+            },
+            {
+              "description": "Works with the min and max attributes to limit the increments at which a value can be set. Possible values are: `\"any\"` or a positive floating point number.",
+              "isRequired": false,
+              "name": "step",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "The type of control to display. The default type is text.",
+              "isRequired": false,
+              "name": "type",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "date"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "email"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "number"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "password"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "search"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "tel"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "text"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "url"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "time"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "color"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "description": "The value of the input.",
+              "isRequired": false,
+              "name": "value",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "**For testing purposes** Interaction state of the input",
+              "isRequired": false,
+              "name": "vrtState",
+              "type": {
+                "name": "literal",
+                "structure": {
+                  "value": "focus"
+                }
+              }
+            },
+            {
+              "description": "When set to `true` add ons will render with a different style. Will be ignored if `prepend` or `append` slots are not being used.",
+              "isRequired": false,
+              "name": "watermark",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
+            },
+            {
+              "description": "The width of the input.",
+              "isRequired": false,
+              "name": "width",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "2"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "4"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "6"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "8"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "10"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "12"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "16"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "25Perc"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "50Perc"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "75Perc"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "2"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "4"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "6"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "8"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "10"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "12"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "16"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "25Perc"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "50Perc"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "75Perc"
+                      }
+                    }
+                  ]
+                }
               }
             }
           ],
@@ -230,6 +1123,15 @@
                 "name": "any",
                 "structure": {}
               }
+            },
+            {
+              "description": "Container stretches to fill the width of the browser window if true.",
+              "isRequired": false,
+              "name": "fluid",
+              "type": {
+                "name": "boolean",
+                "structure": {}
+              }
             }
           ],
           "wrappers": [
@@ -287,6 +1189,142 @@
               "type": {
                 "name": "any",
                 "structure": {}
+              }
+            },
+            {
+              "description": "The amount of space between columns. If a single value is provided, this will be applied to all viewport sizes. If multiple values are provided, the first will apply to the small viewport upwards, the second to the medium viewport upwards, the third (if set) to the large viewport upwards, and the fourth (if set) to the extra large viewport.",
+              "isRequired": false,
+              "name": "gutter",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "none"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "xs"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "sm"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "md"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "lg"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "xl"
+                      }
+                    },
+                    {
+                      "name": "array",
+                      "structure": {}
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "description": "Horizontal alignment, follows flexbox justify-content",
+              "isRequired": false,
+              "name": "horizontalAlign",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "around"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "between"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "center"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "evenly"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "left"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "right"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "description": "Vertical alignment, follows flexbox align-items",
+              "isRequired": false,
+              "name": "verticalAlign",
+              "type": {
+                "name": "union",
+                "structure": {
+                  "elements": [
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "bottom"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "middle"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "stretch"
+                      }
+                    },
+                    {
+                      "name": "literal",
+                      "structure": {
+                        "value": "top"
+                      }
+                    }
+                  ]
+                }
               }
             }
           ],
@@ -362,7 +1400,7 @@
   "name": "Example Design System",
   "vcs": {
     "branchName": "master",
-    "commitHash": "3ec52c25ff64e3a7ab219469e13c8a82869d13ff",
+    "commitHash": "c5e41c7efc0b30c91d15f537d83fd69f766994de",
     "paths": {
       "configPath": "/Users/tom.hancock/Development/tomhancock2/stenciljs-uxpin-merge/packages/components-uxpin/uxpin.config.js",
       "projectRoot": "/Users/tom.hancock/Development/tomhancock2/stenciljs-uxpin-merge/packages/components-uxpin"
