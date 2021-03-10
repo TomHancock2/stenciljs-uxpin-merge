@@ -16,7 +16,6 @@ import {
     InputCssClass,
     InputMode,
     InputSlot,
-    InputVRTState,
     InputWidth,
     NativeInputElement,
 } from './input.types';
@@ -159,11 +158,6 @@ export class Input implements ComponentInterface {
      * The value of the input.
      */
     @Prop({ mutable: true, reflect: true }) value?: string | null = '';
-
-    /**
-     * **For testing purposes** Interaction state of the input
-     */
-    @Prop() vrtState?: InputVRTState;
 
     /**
      * When set to `true` add ons will render with a different style. Will be ignored if `prepend` or `append` slots are not being used.
@@ -432,7 +426,6 @@ export class Input implements ComponentInterface {
                     [InputCssClass.TextArea]: this.rows > 1,
                     [InputCssClass.Focus]:
                         this.hasFocus ||
-                        this.vrtState === InputVRTState.Focus ||
                         this.isExpanded,
                     [InputCssClass.HiddenLabel]: this.hiddenLabel,
                     [widthClass]: addWidthClass,
