@@ -338,7 +338,6 @@ export class Input implements ComponentInterface {
     };
 
     private onInput = (evt: KeyboardEvent): void => {
-        console.log('hello');
         const input = evt.target as HTMLInputElement | null;
         if (input !== null) {
             this.value = input.value || '';
