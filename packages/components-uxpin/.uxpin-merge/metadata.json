@@ -81,6 +81,24 @@
               }
             },
             {
+              "description": "",
+              "isRequired": false,
+              "name": "onSubmit",
+              "type": {
+                "name": "func",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "onError",
+              "type": {
+                "name": "func",
+                "structure": {}
+              }
+            },
+            {
               "description": "A space- or comma-delimited list of character encodings that the server accepts",
               "isRequired": false,
               "name": "acceptCharset",
@@ -589,9 +607,72 @@
             {
               "description": "",
               "isRequired": false,
+              "name": "uxpinRef",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
               "name": "children",
               "type": {
                 "name": "node",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "onChange",
+              "type": {
+                "name": "func",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "onBlur",
+              "type": {
+                "name": "func",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "onFocus",
+              "type": {
+                "name": "func",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "onInput",
+              "type": {
+                "name": "func",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "onKeyDown",
+              "type": {
+                "name": "func",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "onClear",
+              "type": {
+                "name": "func",
                 "structure": {}
               }
             },
@@ -1445,7 +1526,7 @@
   "name": "Example Design System",
   "vcs": {
     "branchName": "master",
-    "commitHash": "48ec69e94ecced498211a1ac1f1c911e634243d0",
+    "commitHash": "798b0ddcfcfc410068a35e1dde4d4f3661236208",
     "paths": {
       "configPath": "/Users/tom.hancock/Development/tomhancock2/stenciljs-uxpin-merge/packages/components-uxpin/uxpin.config.js",
       "projectRoot": "/Users/tom.hancock/Development/tomhancock2/stenciljs-uxpin-merge/packages/components-uxpin"

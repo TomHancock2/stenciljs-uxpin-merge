@@ -13,15 +13,9 @@ const ExampleContainer = (props: ExampleContainerProps) => {
         {},
         uxpinRef
     );
-    const [showChildren, setShowChildren] = React.useState(false);
-    React.useEffect(() => {
-        if (!showChildren) {
-            setShowChildren(true);
-        }
-    });
     return (
         <example-container {...customElementProps} ref={ref}>
-            {showChildren ? children: null}
+            <div>{children}</div>
         </example-container>
     );
 };

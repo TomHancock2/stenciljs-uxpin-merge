@@ -15,7 +15,7 @@ const ExampleRow = (props: ExampleRowProps) => {
     );
     return (
         <example-row {...customElementProps} ref={ref}>
-            {children}
+            <div>{children}</div>
         </example-row>
     );
 };

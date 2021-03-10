@@ -16,7 +16,7 @@ const ExampleField = (props: ExampleFieldProps) => {
     );
     return (
         <example-field {...customElementProps} ref={ref}>
-            {children}
+            <div>{children}</div>
         </example-field>
     );
 };

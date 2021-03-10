@@ -5,4 +5,6 @@ import { Omit } from '../../utils/interface';
 export interface ExampleFormProps extends Omit<Components.ExampleForm, "submit"|"reset"> {
   header?: React.ReactNode;
   children?: React.ReactNode;
+  onSubmit?: () => void;
+  onError?: () => void;
 }

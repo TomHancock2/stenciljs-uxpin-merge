@@ -14,7 +14,7 @@ const ExampleCol = (props: ExampleColProps) => {
     );
     return (
         <example-col {...customElementProps} ref={ref}>
-            {children}
+            <div>{children}</div>
         </example-col>
     );
 };
