@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useCustomElement } from 'react-friendly-custom-elements';
-import { ExampleInputProps } from './ExampleInput.types';
+
+import { ExampleInputProps, InputRef } from './ExampleInput.types';
+import { uniqueKey } from '../../utils/helpers';
 
 /**
  * @uxpinwrappers
@@ -18,13 +20,14 @@ const ExampleInput = (props: ExampleInputProps) => {
             onKeyDown: 'exampleKeyDown',
             onClear: 'exampleClear',
         },
-        uxpinRef
+        uxpinRef as InputRef,
     );
     return (
         <example-input 
             onExampleInput={onInput} 
             {...customElementProps} 
             ref={ref}
+            key={uniqueKey('example-form')}
         >
             {children}
         </example-input>

@@ -11,27 +11,27 @@
         "start-uxpin-server": "uxpin-merge server --webpack-config ./webpack.uxpin.config.js"
     },
     "devDependencies": {
-        "@babel/core": "^7.13.8",
-        "@babel/preset-env": "^7.13.8",
-        "@babel/preset-react": "^7.12.13",
-        "@babel/types": "^7.13.0",
-        "@types/react": "^17.0.2",
-        "@types/react-dom": "^17.0.1",
+        "@babel/core": "^7.17.5",
+        "@babel/preset-env": "^7.16.11",
+        "@babel/preset-react": "^7.16.7",
+        "@babel/types": "^7.17.0",
+        "@types/react": "^17.0.42",
+        "@types/react-dom": "^17.0.14",
         "awesome-typescript-loader": "^5.2.1",
-        "babel-loader": "^8.2.2",
+        "babel-loader": "^8.2.3",
         "css-loader": "^5.1.1",
-        "prop-types": "^15.7.2",
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1",
+        "prop-types": "^15.8.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
         "style-loader": "^2.0.0",
-        "ts-loader": "^8.0.17",
-        "ts-node": "^9.1.1",
-        "webpack": "^5.24.2",
-        "webpack-cli": "^4.5.0"
+        "ts-loader": "^9.2.7",
+        "ts-node": "^10.7.0",
+        "typescript": "4.2.4"
     },
     "dependencies": {
-        "@uxpin/merge-cli": "^2.7.4-dev.1",
+        "@uxpin/merge-cli": "^2.7.10",
         "components": "^0.0.1",
-        "react-friendly-custom-elements": "^0.0.1"
+        "react-friendly-custom-elements": "^0.0.1",
+        "uuid": "^8.3.2"
     }
 }

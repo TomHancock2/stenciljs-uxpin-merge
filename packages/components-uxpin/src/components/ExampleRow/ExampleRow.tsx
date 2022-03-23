@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useCustomElement } from 'react-friendly-custom-elements';
-import { ExampleRowProps } from './ExampleRow.types';
+
+import { ExampleRowProps, RowRef } from './ExampleRow.types';
+import { uniqueKey } from '../../utils/helpers';
 
 /**
  * @uxpinwrappers
@@ -11,11 +13,15 @@ const ExampleRow = (props: ExampleRowProps) => {
     const [customElementProps, ref] = useCustomElement(
         otherProps,
         {},
-        uxpinRef
+        uxpinRef as RowRef,
     );
     return (
-        <example-row {...customElementProps} ref={ref}>
-            <div>{children}</div>
+        <example-row
+            {...customElementProps} 
+            ref={ref}
+            key={uniqueKey('example-form')}
+        >
+            {children}
         </example-row>
     );
 };
