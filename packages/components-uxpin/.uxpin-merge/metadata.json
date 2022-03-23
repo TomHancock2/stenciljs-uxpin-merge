@@ -3,6 +3,7 @@
     {
       "components": [
         {
+          "defaultExported": true,
           "documentation": {
             "examples": [
               {
@@ -65,9 +66,9 @@
             {
               "description": "",
               "isRequired": false,
-              "name": "header",
+              "name": "uxpinRef",
               "type": {
-                "name": "node",
+                "name": "shape",
                 "structure": {}
               }
             },
@@ -95,6 +96,15 @@
               "name": "onError",
               "type": {
                 "name": "func",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "slot",
+              "type": {
+                "name": "string",
                 "structure": {}
               }
             },
@@ -185,32 +195,37 @@
                 "structure": {
                   "elements": [
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "H2",
                         "value": "h2"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "H3",
                         "value": "h3"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "H4",
                         "value": "h4"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "H5",
                         "value": "h5"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "H6",
                         "value": "h6"
                       }
                     }
@@ -368,6 +383,7 @@
           ]
         },
         {
+          "defaultExported": true,
           "documentation": {
             "examples": [
               {
@@ -397,9 +413,27 @@
             {
               "description": "",
               "isRequired": false,
+              "name": "uxpinRef",
+              "type": {
+                "name": "shape",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
               "name": "children",
               "type": {
                 "name": "node",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "slot",
+              "type": {
+                "name": "string",
                 "structure": {}
               }
             },
@@ -565,6 +599,7 @@
           ]
         },
         {
+          "defaultExported": true,
           "documentation": {
             "examples": [
               {
@@ -609,7 +644,7 @@
               "isRequired": false,
               "name": "uxpinRef",
               "type": {
-                "name": "string",
+                "name": "shape",
                 "structure": {}
               }
             },
@@ -677,6 +712,15 @@
               }
             },
             {
+              "description": "",
+              "isRequired": false,
+              "name": "slot",
+              "type": {
+                "name": "string",
+                "structure": {}
+              }
+            },
+            {
               "description": "Indicates whether the value of the control can be automatically completed by the browser.",
               "isRequired": false,
               "name": "autocomplete",
@@ -736,50 +780,58 @@
                 "structure": {
                   "elements": [
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "None",
                         "value": "none"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Text",
                         "value": "text"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Tel",
                         "value": "tel"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Url",
                         "value": "url"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Email",
                         "value": "email"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Numeric",
                         "value": "numeric"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Decimal",
                         "value": "decimal"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Search",
                         "value": "search"
                       }
                     }
@@ -931,62 +983,72 @@
                 "structure": {
                   "elements": [
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Date",
                         "value": "date"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Email",
                         "value": "email"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Number",
                         "value": "number"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Password",
                         "value": "password"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Search",
                         "value": "search"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Tel",
                         "value": "tel"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Text",
                         "value": "text"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Url",
                         "value": "url"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Time",
                         "value": "time"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Color",
                         "value": "color"
                       }
                     }
@@ -1021,122 +1083,142 @@
                 "structure": {
                   "elements": [
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Two",
                         "value": "2"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Four",
                         "value": "4"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Six",
                         "value": "6"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Eight",
                         "value": "8"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Ten",
                         "value": "10"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Twelve",
                         "value": "12"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Sixteen",
                         "value": "16"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "TwentyFivePercent",
                         "value": "25Perc"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "FiftyPercent",
                         "value": "50Perc"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "SeventyFivePercent",
                         "value": "75Perc"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Two",
                         "value": "2"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Four",
                         "value": "4"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Six",
                         "value": "6"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Eight",
                         "value": "8"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Ten",
                         "value": "10"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Twelve",
                         "value": "12"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Sixteen",
                         "value": "16"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "TwentyFivePercent",
                         "value": "25Perc"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "FiftyPercent",
                         "value": "50Perc"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "SeventyFivePercent",
                         "value": "75Perc"
                       }
                     }
@@ -1158,6 +1240,7 @@
     {
       "components": [
         {
+          "defaultExported": true,
           "documentation": {
             "examples": [
               {
@@ -1230,9 +1313,27 @@
             {
               "description": "",
               "isRequired": false,
+              "name": "uxpinRef",
+              "type": {
+                "name": "shape",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
               "name": "children",
               "type": {
                 "name": "node",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "slot",
+              "type": {
+                "name": "string",
                 "structure": {}
               }
             },
@@ -1254,6 +1355,7 @@
           ]
         },
         {
+          "defaultExported": true,
           "documentation": {
             "examples": [
               {
@@ -1294,9 +1396,27 @@
             {
               "description": "",
               "isRequired": false,
+              "name": "uxpinRef",
+              "type": {
+                "name": "shape",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
               "name": "children",
               "type": {
                 "name": "node",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "slot",
+              "type": {
+                "name": "string",
                 "structure": {}
               }
             },
@@ -1309,38 +1429,44 @@
                 "structure": {
                   "elements": [
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "None",
                         "value": "none"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Xs",
                         "value": "xs"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Sm",
                         "value": "sm"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Md",
                         "value": "md"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Lg",
                         "value": "lg"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Xl",
                         "value": "xl"
                       }
                     },
@@ -1361,38 +1487,44 @@
                 "structure": {
                   "elements": [
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Around",
                         "value": "around"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Between",
                         "value": "between"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Center",
                         "value": "center"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Evenly",
                         "value": "evenly"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Left",
                         "value": "left"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Right",
                         "value": "right"
                       }
                     }
@@ -1409,26 +1541,30 @@
                 "structure": {
                   "elements": [
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Bottom",
                         "value": "bottom"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Middle",
                         "value": "middle"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Stretch",
                         "value": "stretch"
                       }
                     },
                     {
-                      "name": "literal",
+                      "name": "enum",
                       "structure": {
+                        "label": "Top",
                         "value": "top"
                       }
                     }
@@ -1445,6 +1581,7 @@
           ]
         },
         {
+          "defaultExported": true,
           "documentation": {
             "examples": [
               {
@@ -1498,7 +1635,7 @@
               "isRequired": false,
               "name": "uxpinRef",
               "type": {
-                "name": "string",
+                "name": "shape",
                 "structure": {}
               }
             },
@@ -1508,6 +1645,15 @@
               "name": "children",
               "type": {
                 "name": "node",
+                "structure": {}
+              }
+            },
+            {
+              "description": "",
+              "isRequired": false,
+              "name": "slot",
+              "type": {
+                "name": "string",
                 "structure": {}
               }
             }
@@ -1526,7 +1672,7 @@
   "name": "Example Design System",
   "vcs": {
     "branchName": "master",
-    "commitHash": "798b0ddcfcfc410068a35e1dde4d4f3661236208",
+    "commitHash": "7f9a4435ca08c1d9b1cfaf41dbe697a0654da3d7",
     "paths": {
       "configPath": "/Users/tom.hancock/Development/tomhancock2/stenciljs-uxpin-merge/packages/components-uxpin/uxpin.config.js",
       "projectRoot": "/Users/tom.hancock/Development/tomhancock2/stenciljs-uxpin-merge/packages/components-uxpin"

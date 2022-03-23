@@ -1,7 +1,8 @@
-import { FormSlot } from 'components/dist/types/components/form/form.types';
 import * as React from 'react';
 import { useCustomElement } from 'react-friendly-custom-elements';
-import { ExampleFieldProps } from './ExampleField.types';
+
+import { ExampleFieldProps, FieldRef } from './ExampleField.types';
+import { uniqueKey } from '../../utils/helpers';
 
 /**
  * @uxpinwrappers
@@ -12,11 +13,15 @@ const ExampleField = (props: ExampleFieldProps) => {
     const [customElementProps, ref] = useCustomElement(
         otherProps,
         {},
-        uxpinRef
+        uxpinRef as FieldRef,
     );
     return (
-        <example-field {...customElementProps} ref={ref}>
-            <div>{children}</div>
+        <example-field
+            {...customElementProps}
+            ref={ref}
+            key={uniqueKey('example-field')}
+        >
+            {children}
         </example-field>
     );
 };

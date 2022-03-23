@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useCustomElement } from 'react-friendly-custom-elements';
-import { ExampleContainerProps } from './ExampleContainer.types';
+
+import { ExampleContainerProps, ContainerRef } from './ExampleContainer.types';
+import { uniqueKey } from '../../utils/helpers';
 
 /**
  * @uxpinwrappers
@@ -11,11 +13,15 @@ const ExampleContainer = (props: ExampleContainerProps) => {
     const [customElementProps, ref] = useCustomElement(
         otherProps,
         {},
-        uxpinRef
+        uxpinRef as ContainerRef,
     );
     return (
-        <example-container {...customElementProps} ref={ref}>
-            <div>{children}</div>
+        <example-container 
+            {...customElementProps}
+            ref={ref}
+            key={uniqueKey('example-container')}
+        >
+            {children}
         </example-container>
     );
 };

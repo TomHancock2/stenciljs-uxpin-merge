@@ -1,6 +1,9 @@
 import * as React from 'react';
 import { useCustomElement } from 'react-friendly-custom-elements';
-import { ExampleColProps } from './ExampleCol.types';
+
+import { ExampleColProps, ColRef } from './ExampleCol.types';
+import { uniqueKey } from '../../utils/helpers';
+
 /**
  * @uxpinwrappers
  * NonResizableWrapper
@@ -10,11 +13,15 @@ const ExampleCol = (props: ExampleColProps) => {
     const [customElementProps, ref] = useCustomElement(
         otherProps,
         {},
-        uxpinRef
+        uxpinRef as ColRef,
     );
     return (
-        <example-col {...customElementProps} ref={ref}>
-            <div>{children}</div>
+        <example-col 
+            {...customElementProps} 
+            ref={ref}
+            key={uniqueKey('example-col')}
+        >
+            {children}
         </example-col>
     );
 };
