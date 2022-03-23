@@ -2,7 +2,7 @@
 
 **This is an example repository that shows how to use StencilJS components within UXPin Merge.** 
 
-It utilises the [wrapper method of integrating UXPin](https://www.uxpin.com/docs/merge/integrating-your-own-components/#integration-with-wrappers-for-components) and wraps StencilJS build components. 
+It utilises the [wrapper method of integrating UXPin](https://www.uxpin.com/docs/merge/integrating-your-own-components/#integration-with-wrappers-for-components) and wraps StencilJS built components. 
 
 ## Technology
 
@@ -37,7 +37,7 @@ It utilises the [wrapper method of integrating UXPin](https://www.uxpin.com/docs
 
 ### Keys
 
-Each component has a unique key applied at run time to ensure that you do not need to re-load the page every time a property is updated. Due to the nature of web components and slot content, React will throw an error when the content changes.
+Each UXPin component has a unique key applied at run time to ensure that you do not need to re-load the page every time a property is updated. Due to the nature of web components and slot content, React will throw an error when the content changes.
 
 ### Slots
 
