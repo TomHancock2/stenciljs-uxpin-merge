@@ -11,6 +11,7 @@ It utilises the [wrapper method of integrating UXPin](https://www.uxpin.com/docs
 - [TypeScript](https://www.typescriptlang.org/)
 - [UXPin Merge](https://www.uxpin.com/merge)
 - [Lerna Monorepo](https://github.com/lerna/lerna)
+- [Yarn](https://yarnpkg.com/)
 
 ## Repo Structure
 
@@ -19,6 +20,18 @@ It utilises the [wrapper method of integrating UXPin](https://www.uxpin.com/docs
   - `components-uxpin` - UXPin wrappers for the `components` package
   - `react-friendly-custom-elements` - contains a hook called `useCustomElement` for using custom elements in `React`
 - `lerna.json` - configuration of lerna monorepo
+
+## Usage
+
+### Quick start
+
+`yarn install && yarn start:uxpin` - this will install all dependencies, build `components` package and start UXPin merge in experimental mode
+
+### Commands
+
+- `yarn build:stencil` - will build the `components` package
+- `yarn start:stencil` - will start Stencil development server
+- `yarn start:uxpin` - will start UXPin merge in expirmental mode (also run `yarn build:stencil`)
 
 ## Implementation notes
 
